@@ -1,13 +1,12 @@
 // app/components/ThemeSwitcher.tsx
 "use client";
-
+import Image from "next/image";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
 export function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
-  console.log(theme);
 
   useEffect(() => {
     setMounted(true);
@@ -17,9 +16,16 @@ export function ThemeSwitcher() {
 
   return (
     <div>
-      The current theme is: {theme}
-      <button onClick={() => setTheme("light")}>Light Mode</button>
-      <button onClick={() => setTheme("dark")}>Dark Mode</button>
+      {theme === "light" ? (
+        <button onClick={() => setTheme("dark")}>
+          <Image src="moon.svg" width={50} height={50} alt="moon" />
+        </button>
+      ) : (
+        <button onClick={() => setTheme("light")}>
+          {" "}
+          <Image src="sun.svg" width={50} height={50} alt="sun" />
+        </button>
+      )}
     </div>
   );
 }

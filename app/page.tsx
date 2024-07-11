@@ -1,9 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ThemeSwitcher } from "./components/ThemeSwitcher";
 
 export default function Home() {
-  const toggleMode = () => {};
   return (
     <>
       <aside></aside>
