@@ -10,7 +10,7 @@ interface ThemeSwitcherProps {
 }
 
 export function ThemeSwitcher({ width, height }: ThemeSwitcherProps) {
-  const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = useState<boolean>(false);
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {

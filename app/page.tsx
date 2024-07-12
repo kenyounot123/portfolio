@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 
 export default function Home() {
   const { theme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = useState<boolean>(false);
 
   useEffect(() => {
     setMounted(true);
@@ -19,7 +19,6 @@ export default function Home() {
 
   return (
     <>
-      <aside></aside>
       <nav
         className={`py-1 flex ${
           theme === "dark" ? "bg-gray-500" : "bg-cyan-300"
@@ -41,13 +40,11 @@ export default function Home() {
       </nav>
       <main className="flex flex-col min-w-[300px] w-full h-screen justify-center items-center max-w-[90%] mx-auto">
         <div className="relative w-[80%] mx-auto lg:self-center">
-          <div className="max-[500px]:hidden text-sm absolute top-0 right-0 -translate-y-[200%]">
+          <div className="max-[500px]:hidden text-sm absolute top-0 right-0 -translate-y-[230%]">
             <ThemeSwitcher width={50} height={50} />
           </div>
           <p className="text-5xl max-[500px]:mt-32">Ken Lu</p>
-          <p className="text-2xl">
-            Full Stack Developer, RoR Developer, React Developer
-          </p>
+          <p className="text-2xl">Full Stack Developer</p>
         </div>
         <section className="mt-8 w-[80%] mx-auto">
           <p className="lg:relative max-w-[700px]">
@@ -64,7 +61,7 @@ export default function Home() {
             weightlifting, reading Manga, and playing video games. His most
             interesting fun fact is that he dreams of creating an app that
             everyone will use one day.
-            <div className="hidden lg:block lg:absolute lg:right-0 lg:top-0 lg:translate-x-[100%] lg:-translate-y-[40%]">
+            <div className="hidden lg:block lg:absolute lg:right-0 lg:top-0 lg:translate-x-[100%] lg:-translate-y-[30%]">
               {theme === "dark" ? (
                 <Image
                   className="transition duration-300 ease-in-out hover:-translate-y-5"
@@ -90,8 +87,8 @@ export default function Home() {
             <div className="flex">
               <div>💻</div>
               <Link
-                className="transition hover:translate-x-3 duration-300 underline underline-offset-2"
-                href="/projects"
+                className="transition hover:translate-x-10 duration-300 underline underline-offset-2"
+                href="#portfolio"
               >
                 Explore my portfolio
               </Link>
@@ -101,8 +98,8 @@ export default function Home() {
             <div className="flex">
               <div>🧑</div>
               <Link
-                className="transition hover:translate-x-3 duration-300 underline underline-offset-2"
-                href="/about"
+                className="transition hover:translate-x-10 duration-300 underline underline-offset-2"
+                href="#about"
               >
                 Learn more about me{" "}
               </Link>
@@ -112,8 +109,8 @@ export default function Home() {
             <div className="flex">
               <div>📨</div>
               <Link
-                className="transition hover:translate-x-3 duration-300 underline underline-offset-2"
-                href="/contact"
+                className="transition hover:translate-x-10 duration-300 underline underline-offset-2"
+                href="#contact"
               >
                 Contact me{" "}
               </Link>
@@ -121,6 +118,53 @@ export default function Home() {
           </ul>
         </nav>
       </main>
+
+      {/* -------------------------------------------- next section ----------------------------------------------------------- */}
+      <section id="portfolio" className="pt-10 h-[1000px] max-w-[90%] mx-auto">
+        <div className="w-[80%] mx-auto">
+          <h1 className="mb-5 text-4xl">Projects !</h1>
+          <div className="md:flex md:gap-10">
+            <div className="md:self-start relative min-w-[250px] min-h-[250px] md:min-w-[500px] md:min-h-[500px]">
+              <Image
+                className="hover:scale-125 transition ease-in-out duration-300 md:-translate-y-[130px]"
+                alt="messenger app"
+                src="/messenger-app.png"
+                layout="fill"
+                objectFit="scale-down" // or "contain", "fill", "scale-down"
+                quality={100}
+              />
+            </div>
+            <div className="md:max-w-md">
+              <h2 className="text-3xl">Messenger App</h2>
+              <p>Full Stack Developer</p>
+              <p className="py-5">
+                A web-based messaging app that allows users to send messages to
+                each other. Users can create and customize their profiles,
+                authorize their accounts, and engage in one-on-one conversations
+                with real time updates.
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
+                <div>Ruby on Rails</div>
+                <div className="md:text-center">React</div>
+                <div className="md:text-center">Render</div>
+                <div>Postgresql</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* -------------------------------------------- next section ----------------------------------------------------------- */}
+      <section id="about" className="pt-10 h-[1000px] max-w-[90%] mx-auto">
+        <h1 className="w-[80%] mx-auto text-4xl">About Me</h1>
+      </section>
+
+      {/* -------------------------------------------- next section ----------------------------------------------------------- */}
+      <section id="contact" className="pt-10 h-[1000px] max-w-[90%] mx-auto">
+        <h1 className="w-[80%] mx-auto text-4xl">About Me</h1>
+      </section>
+
+      <footer></footer>
     </>
   );
 }
