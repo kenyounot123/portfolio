@@ -4,7 +4,12 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
-export function ThemeSwitcher() {
+interface ThemeSwitcherProps {
+  width: number;
+  height: number;
+}
+
+export function ThemeSwitcher({ width, height }: ThemeSwitcherProps) {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -18,12 +23,24 @@ export function ThemeSwitcher() {
     <div>
       {theme === "light" ? (
         <button onClick={() => setTheme("dark")}>
-          <Image src="moon.svg" width={50} height={50} alt="moon" />
+          <Image
+            className="transition ease-in-out hover:rotate-45 duration-300"
+            src="moon.svg"
+            width={width}
+            height={height}
+            alt="moon"
+          />
         </button>
       ) : (
         <button onClick={() => setTheme("light")}>
           {" "}
-          <Image src="sun.svg" width={50} height={50} alt="sun" />
+          <Image
+            className="transition ease-in-out hover:-rotate-45 duration-300"
+            src="sun.svg"
+            width={width}
+            height={height}
+            alt="sun"
+          />
         </button>
       )}
     </div>
