@@ -14,7 +14,10 @@ export default function Home() {
           <div className="max-[420px]:hidden text-sm absolute top-0 right-0 -translate-y-[200%]">
             <ThemeSwitcher width={50} height={50} />
           </div>
-          <p className="text-5xl">Hi, my name is Ken</p>
+          <p className="text-5xl">Ken Lu</p>
+          <p className="text-2xl">
+            Full Stack Developer, RoR Developer, React Developer
+          </p>
         </div>
         <section className="mt-8 w-[80%] mx-auto">
           <p className="max-w-[700px]">
@@ -34,13 +37,39 @@ export default function Home() {
           </p>
         </section>
         <nav className="mt-8 w-[80%] mx-auto">
-          <ul className="underline underline-offset-2 mb-5">
-            Explore my portfolio
+          <ul className=" mb-5">
+            <div className="flex">
+              <div>💻</div>
+              <Link
+                className="transition hover:translate-x-3 duration-300 underline underline-offset-2"
+                href="/projects"
+              >
+                Explore my portfolio
+              </Link>
+            </div>
           </ul>
-          <ul className="underline underline-offset-2 mt-5">
-            Learn more about me{" "}
+          <ul className="mt-5">
+            <div className="flex">
+              <div>🧑</div>
+              <Link
+                className="transition hover:translate-x-3 duration-300 underline underline-offset-2"
+                href="/about"
+              >
+                Learn more about me{" "}
+              </Link>
+            </div>
           </ul>
-          <ul className="underline underline-offset-2 mt-5">Contact me </ul>
+          <ul className="mt-5">
+            <div className="flex">
+              <div>📨</div>
+              <Link
+                className="transition hover:translate-x-3 duration-300 underline underline-offset-2"
+                href="/contact"
+              >
+                Contact me{" "}
+              </Link>
+            </div>
+          </ul>
         </nav>
       </main>
     </>
