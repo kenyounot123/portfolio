@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import Project from "./components/Project";
 import { ThemeSwitcher } from "./components/ThemeSwitcher";
 import { useState, useEffect } from "react";
 
@@ -120,47 +121,39 @@ export default function Home() {
       </main>
 
       {/* -------------------------------------------- next section ----------------------------------------------------------- */}
-      <section id="portfolio" className="pt-10 h-[1000px] max-w-[90%] mx-auto">
+      <section
+        id="portfolio"
+        className="pt-10 h-[1000px] max-w-[90%] mx-auto mt-32"
+      >
         <div className="w-[80%] mx-auto">
           <h1 className="mb-5 text-4xl">Projects !</h1>
-          <div className="md:flex md:gap-10">
-            <div className="md:self-start relative min-w-[250px] min-h-[250px] md:min-w-[500px] md:min-h-[500px]">
-              <Image
-                className="hover:scale-125 transition ease-in-out duration-300 md:-translate-y-[130px]"
-                alt="messenger app"
-                src="/messenger-app.png"
-                layout="fill"
-                objectFit="scale-down" // or "contain", "fill", "scale-down"
-                quality={100}
-              />
-            </div>
-            <div className="md:max-w-md">
-              <h2 className="text-3xl">Messenger App</h2>
-              <p>Full Stack Developer</p>
-              <p className="py-5">
-                A web-based messaging app that allows users to send messages to
+          <Project
+            projLink="https://messenger-app-0vcf.onrender.com/"
+            appName="Messenger App"
+            appRole="Full Stack Developer"
+            appDescription="A web-based messaging app that allows users to send messages to
                 each other. Users can create and customize their profiles,
                 authorize their accounts, and engage in one-on-one conversations
-                with real time updates.
-              </p>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
-                <div>Ruby on Rails</div>
-                <div className="md:text-center">React</div>
-                <div className="md:text-center">Render</div>
-                <div>Postgresql</div>
-              </div>
-            </div>
-          </div>
+                with real time updates."
+            techStack={["Ruby on Rails", "React", "Postgresql", "Render"]}
+            appImg="/messenger-app.png"
+          />
         </div>
       </section>
 
       {/* -------------------------------------------- next section ----------------------------------------------------------- */}
-      <section id="about" className="pt-10 h-[1000px] max-w-[90%] mx-auto">
+      <section
+        id="about"
+        className="pt-10 h-[1000px] max-w-[90%] mx-auto mt-32"
+      >
         <h1 className="w-[80%] mx-auto text-4xl">About Me</h1>
       </section>
 
       {/* -------------------------------------------- next section ----------------------------------------------------------- */}
-      <section id="contact" className="pt-10 h-[1000px] max-w-[90%] mx-auto">
+      <section
+        id="contact"
+        className="pt-10 h-[1000px] max-w-[90%] mx-auto mt-32"
+      >
         <h1 className="w-[80%] mx-auto text-4xl">About Me</h1>
       </section>
 
