@@ -4,16 +4,37 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 import Project from "./components/Project";
 import { ThemeSwitcher } from "./components/ThemeSwitcher";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 export default function Home() {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState<boolean>(false);
 
+  gsap.registerPlugin(useGSAP);
+  gsap.registerPlugin(ScrollTrigger);
+
+  const portfolioRef = useRef();
+
   useEffect(() => {
     setMounted(true);
   }, []);
 
+  useGSAP(() => {
+    const portfolio = portfolioRef.current;
+    gsap.to(portfolioRef, {
+      scrollTrigger: {
+        trigger: portfolio,
+        toggleActions: "restart none none none",
+        markers: true,
+      },
+      x: 500,
+      rotation: 360,
+      duration: 3,
+    });
+  }, []);
   if (!mounted) {
     return null; // Render nothing on the server
   }
@@ -45,7 +66,7 @@ export default function Home() {
             <ThemeSwitcher width={50} height={50} />
           </div>
           <p className="text-5xl max-[500px]:mt-32">Ken Lu</p>
-          <p className="text-2xl">Full Stack Developer</p>
+          <p className="text-2xl">Full Stack Web Developer</p>
         </div>
         <section className="mt-8 w-[80%] mx-auto">
           <p className="lg:relative max-w-[700px]">
@@ -122,6 +143,7 @@ export default function Home() {
 
       {/* -------------------------------------------- next section ----------------------------------------------------------- */}
       <section
+        ref={portfolioRef}
         id="portfolio"
         className="pt-10 min-h-[1000px] max-w-[90%] mx-auto mt-32"
       >
