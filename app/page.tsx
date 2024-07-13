@@ -147,7 +147,7 @@ export default function Home() {
                 characters within a large photograph. It's inspired by games like 'Where's Waldo?'."
             techStack={["Ruby on Rails", "React", "Vanilla CSS"]}
             appImg="/wheres_waldo.png"
-            reverse={true}
+            reverse={false}
           />
           <Project
             projLink="https://kenyounot123.github.io/BU-hackathon/"
@@ -165,7 +165,7 @@ export default function Home() {
             appDescription="Created a full-stack social media site consisting of the core user functionalities of any social media apps such as Facebook, Twitter, threads, etc."
             techStack={["Ruby on Rails", "Hotwire/StimulusJS", "Bootstrap"]}
             appImg="/stellar.png"
-            reverse={true}
+            reverse={false}
           />
         </div>
       </section>

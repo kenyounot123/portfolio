@@ -7,6 +7,7 @@ const inter = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ken Lu",
+  icons: "/favicon/favicon.ico",
 };
 
 export default function RootLayout({

@@ -20,14 +20,14 @@ export default function Project({
 }: ProjectProps) {
   return (
     <div
-      className={`mt-5 md:flex md:gap-10 ${
+      className={`mt-5 md:flex md:justify-center md:gap-10 ${
         reverse ? "md:flex-row-reverse" : null
       }`}
     >
-      <div className="md:self-start relative min-w-[250px] min-h-[250px] md:min-w-[500px] md:min-h-[500px]">
+      <div className="md:self-start relative min-w-[250px] min-h-[250px] md:min-w-[500px] md:min-h-content">
         <Link target="_blank" rel="noopener noreferrer" href={projLink}>
           <Image
-            className="hover:scale-105 transition ease-in-out duration-300 md:-translate-y-[130px]"
+            className="hover:scale-105 transition ease-in-out duration-300"
             alt="project screenshot"
             src={appImg}
             layout="fill"
