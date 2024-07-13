@@ -123,10 +123,10 @@ export default function Home() {
       {/* -------------------------------------------- next section ----------------------------------------------------------- */}
       <section
         id="portfolio"
-        className="pt-10 h-[1000px] max-w-[90%] mx-auto mt-32"
+        className="pt-10 min-h-[1000px] max-w-[90%] mx-auto mt-32"
       >
         <div className="w-[80%] mx-auto">
-          <h1 className="mb-5 text-4xl">Projects !</h1>
+          <h1 className="text-4xl mb-5 pb-5">Projects !</h1>
           <Project
             projLink="https://messenger-app-0vcf.onrender.com/"
             appName="Messenger App"
@@ -137,6 +137,35 @@ export default function Home() {
                 with real time updates."
             techStack={["Ruby on Rails", "React", "Postgresql", "Render"]}
             appImg="/messenger-app.png"
+            reverse={false}
+          />
+          <Project
+            projLink="https://github.com/kenyounot123/wheres-waldo"
+            appName="Wheres Waldo"
+            appRole="Full Stack Developer"
+            appDescription="A photo tagging web application that allows users to play a mini game to identify specific 
+                characters within a large photograph. It's inspired by games like 'Where's Waldo?'."
+            techStack={["Ruby on Rails", "React", "Vanilla CSS"]}
+            appImg="/wheres_waldo.png"
+            reverse={true}
+          />
+          <Project
+            projLink="https://kenyounot123.github.io/BU-hackathon/"
+            appName="University Club Match Quiz"
+            appRole="Frontend Developer"
+            appDescription="Binghamton University's Annual Hackathon winning project! A simple quiz that would help users find a club to join in Binghamton University based off their interests."
+            techStack={["Git", "Python", "Vanilla CSS", "Vanilla JavaScript"]}
+            appImg="/hackathon.png"
+            reverse={false}
+          />
+          <Project
+            projLink="github.com/kenyounot123/Social-media-clone"
+            appName="Stellar"
+            appRole="Full Stack Developer"
+            appDescription="Created a full-stack social media site consisting of the core user functionalities of any social media apps such as Facebook, Twitter, threads, etc."
+            techStack={["Ruby on Rails", "Hotwire/StimulusJS", "Bootstrap"]}
+            appImg="/stellar.png"
+            reverse={true}
           />
         </div>
       </section>
@@ -146,7 +175,37 @@ export default function Home() {
         id="about"
         className="pt-10 h-[1000px] max-w-[90%] mx-auto mt-32"
       >
-        <h1 className="w-[80%] mx-auto text-4xl">About Me</h1>
+        <div className="mx-auto w-[80%]">
+          <h1 className="text-4xl">About Me</h1>
+          <div className="lg:flex lg:gap-32">
+            <p className="mt-5 pt-5 max-w-[700px]">
+              Hi! I&apos;m Ken, a recent graduate at Binghamton University
+              eagerly seeking careers in software engineering. I graduated with
+              a BA in Mathematics but realized I wanted to pursue a career in
+              Software Development at the end of my Junior year. I began my web
+              development journey completely self-taught through{" "}
+              <Link
+                href="https://www.theodinproject.com"
+                className="underline underline-offset-2"
+              >
+                The Odin Project
+              </Link>
+              . Over the year, I have developed a strong foundation in HTML,
+              CSS, and JavaScript and mastered the art of building responsive
+              web pages. Currently, Ruby on Rails and React are my favorite
+              frameworks to work in! I am also currently learning TypeScript and
+              Next. I dream of creating an app where everyone will use one day
+            </p>
+            <div>
+              <Image
+                src={"/about-me.png"}
+                alt="dreams never die"
+                width={500}
+                height={500}
+              />
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* -------------------------------------------- next section ----------------------------------------------------------- */}
@@ -154,7 +213,7 @@ export default function Home() {
         id="contact"
         className="pt-10 h-[1000px] max-w-[90%] mx-auto mt-32"
       >
-        <h1 className="w-[80%] mx-auto text-4xl">About Me</h1>
+        <h1 className="w-[80%] mx-auto text-4xl">Contact Me</h1>
       </section>
 
       <footer></footer>

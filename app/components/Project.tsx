@@ -7,6 +7,7 @@ interface ProjectProps {
   appDescription: string;
   appImg: string;
   techStack: string[];
+  reverse: boolean;
 }
 export default function Project({
   projLink,
@@ -15,9 +16,14 @@ export default function Project({
   appDescription,
   techStack,
   appImg,
+  reverse,
 }: ProjectProps) {
   return (
-    <div className="md:flex md:gap-10">
+    <div
+      className={`mt-5 md:flex md:gap-10 ${
+        reverse ? "md:flex-row-reverse" : null
+      }`}
+    >
       <div className="md:self-start relative min-w-[250px] min-h-[250px] md:min-w-[500px] md:min-h-[500px]">
         <Link target="_blank" rel="noopener noreferrer" href={projLink}>
           <Image
@@ -31,12 +37,12 @@ export default function Project({
         </Link>
       </div>
       <div className="md:max-w-md">
-        <h2 className="text-3xl">{appName}</h2>
+        <h2 className="text-3xl mt-5">{appName}</h2>
         <p>{appRole}</p>
         <p className="py-5">{appDescription}</p>
         <div className="flex gap-5 flex-wrap">
           {techStack.map((lang, index) => (
-            <div className="text-nowrap bg-red-500 rounded-3xl p-2" key={index}>
+            <div className="text-nowrap rounded-3xl p-2" key={index}>
               {lang}
             </div>
           ))}
