@@ -37,7 +37,9 @@ export default function Project({
         </Link>
       </div>
       <div className="md:max-w-md">
-        <h2 className="text-3xl mt-5">{appName}</h2>
+        <h2 className="text-3xl mt-5 bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent">
+          {appName}
+        </h2>
         <p>{appRole}</p>
         <p className="py-5">{appDescription}</p>
         <div className="flex gap-5 flex-wrap">

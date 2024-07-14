@@ -16,7 +16,7 @@ export default function Home() {
   gsap.registerPlugin(useGSAP);
   gsap.registerPlugin(ScrollTrigger);
 
-  const portfolioRef = useRef();
+  const portfolioRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -24,12 +24,7 @@ export default function Home() {
 
   useGSAP(() => {
     const portfolio = portfolioRef.current;
-    gsap.to(portfolioRef, {
-      scrollTrigger: {
-        trigger: portfolio,
-        toggleActions: "restart none none none",
-        markers: true,
-      },
+    gsap.to(portfolio, {
       x: 500,
       rotation: 360,
       duration: 3,
@@ -41,6 +36,52 @@ export default function Home() {
 
   return (
     <>
+      <aside className="hidden rotate-90 min-[330px]:block float-right fixed bottom-1/4 -right-14 md:-right-0">
+        <div className="relative">
+          <p className="">Copyright © Ken Lu</p>
+          <div className="absolute right-1/2 top-1/2 translate-x-[157%] w-[160px] border-t-[0.1px] border-current"></div>
+        </div>
+      </aside>
+      <aside className="hidden min-[330px]:block float-left fixed bottom-0 left-2 md:left-12 lg:left-14">
+        <ul className="after:block after:w-[0.2px] after:h-[150px] after:border-l-[0.2px] after:border-current after:mt-2 after:ml-[13px]">
+          <li className="mb-5">
+            <Link target="_blank" href={"https://github.com/kenyounot123"}>
+              <Image
+                className="transition ease-in-out duration-300 hover:rotate-[360deg]"
+                src="/github-mark.svg"
+                alt="aside icon"
+                width={30}
+                height={30}
+              />
+            </Link>
+          </li>
+          <li className="mt-5">
+            <Link
+              target="_blank"
+              href={"https://www.linkedin.com/in/ken-h-lu/"}
+            >
+              <Image
+                className="transition ease-in-out duration-300 hover:rotate-[360deg]"
+                src="/linkedin.svg"
+                alt="aside icon"
+                width={30}
+                height={30}
+              />
+            </Link>
+          </li>
+          <li className="mt-5">
+            <Link href={"mailto:kenlu519@gmail.com"}>
+              <Image
+                className="transition ease-in-out duration-300 hover:rotate-[360deg]"
+                src="/mail.svg"
+                alt="aside icon"
+                width={30}
+                height={30}
+              />
+            </Link>
+          </li>
+        </ul>
+      </aside>
       <nav
         className={`py-1 flex ${
           theme === "dark" ? "bg-gray-500" : "bg-cyan-300"
@@ -65,7 +106,9 @@ export default function Home() {
           <div className="max-[500px]:hidden text-sm absolute top-0 right-0 -translate-y-[230%]">
             <ThemeSwitcher width={50} height={50} />
           </div>
-          <p className="text-5xl max-[500px]:mt-32">Ken Lu</p>
+          <p className="text-5xl max-[500px]:mt-32 bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent">
+            Ken Lu
+          </p>
           <p className="text-2xl">Full Stack Web Developer</p>
         </div>
         <section className="mt-8 w-[80%] mx-auto">
@@ -83,7 +126,7 @@ export default function Home() {
             weightlifting, reading Manga, and playing video games. His most
             interesting fun fact is that he dreams of creating an app that
             everyone will use one day.
-            <div className="hidden lg:block lg:absolute lg:right-0 lg:top-0 lg:translate-x-[100%] lg:-translate-y-[30%]">
+            <div className="hidden min-[1500px]:block lg:absolute lg:right-0 lg:top-0 lg:translate-x-[100%] lg:-translate-y-[30%]">
               {theme === "dark" ? (
                 <Image
                   className="transition duration-300 ease-in-out hover:-translate-y-5"
@@ -148,7 +191,9 @@ export default function Home() {
         className="pt-10 min-h-[1000px] max-w-[90%] mx-auto mt-32"
       >
         <div className="w-[80%] mx-auto">
-          <h1 className="text-4xl mb-5 pb-5">Projects !</h1>
+          <h1 className="text-4xl mb-5 pb-5 bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent">
+            Projects !
+          </h1>
           <Project
             projLink="https://messenger-app-0vcf.onrender.com/"
             appName="Messenger App"
@@ -185,7 +230,7 @@ export default function Home() {
             appName="Stellar"
             appRole="Full Stack Developer"
             appDescription="Created a full-stack social media site consisting of the core user functionalities of any social media apps such as Facebook, Twitter, threads, etc."
-            techStack={["Ruby on Rails", "Hotwire/StimulusJS", "Bootstrap"]}
+            techStack={["Ruby on Rails", "Hotwire", "Postgresql", "StimulusJS"]}
             appImg="/stellar.png"
             reverse={false}
           />
@@ -198,7 +243,9 @@ export default function Home() {
         className="pt-10 h-[1000px] max-w-[90%] mx-auto mt-32"
       >
         <div className="mx-auto w-[80%]">
-          <h1 className="text-4xl">About Me</h1>
+          <h1 className="text-4xl bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent">
+            About Me
+          </h1>
           <div className="lg:flex lg:gap-32">
             <p className="mt-5 pt-5 max-w-[700px]">
               Hi! I&apos;m Ken, a recent graduate at Binghamton University
@@ -233,7 +280,7 @@ export default function Home() {
       {/* -------------------------------------------- next section ----------------------------------------------------------- */}
       <section
         id="contact"
-        className="pt-10 h-[1000px] max-w-[90%] mx-auto mt-32"
+        className="pt-10 h-[1000px] max-w-[90%] mx-auto mt-32 bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent"
       >
         <h1 className="w-[80%] mx-auto text-4xl">Contact Me</h1>
       </section>
