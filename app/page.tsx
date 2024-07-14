@@ -22,7 +22,7 @@ export default function Home() {
     <>
       <aside className="hidden rotate-90 min-[330px]:block float-right fixed bottom-1/4 -right-14 md:-right-0">
         <div className="relative">
-          <p className="">Copyright © Ken Lu</p>
+          <p>Copyright © Ken Lu</p>
           <div className="absolute right-1/2 top-1/2 translate-x-[157%] w-[160px] border-t-[0.1px] border-current"></div>
         </div>
       </aside>
@@ -226,8 +226,8 @@ export default function Home() {
           <h1 className="text-4xl bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent">
             About Me
           </h1>
-          <div className="lg:flex lg:gap-32">
-            <p className="mt-5 pt-5 max-w-[700px]">
+          <div className="lg:flex lg:gap-32 mt-5 pt-5">
+            <p className="max-w-[700px]">
               Hi! I&apos;m Ken, a recent graduate at Binghamton University
               eagerly seeking careers in software engineering. I graduated with
               a BA in Mathematics but realized I wanted to pursue a career in
@@ -243,14 +243,16 @@ export default function Home() {
               CSS, and JavaScript and mastered the art of building responsive
               web pages. Currently, Ruby on Rails and React are my favorite
               frameworks to work in! I am also currently learning TypeScript and
-              Next. I dream of creating an app where everyone will use one day
+              Next.
             </p>
             <div>
               <Image
                 src={"/about-me.png"}
                 alt="dreams never die"
-                width={500}
-                height={500}
+                width="0"
+                height="0"
+                sizes="100vw"
+                className="w-full h-auto"
               />
             </div>
           </div>
@@ -260,9 +262,31 @@ export default function Home() {
       {/* -------------------------------------------- next section ----------------------------------------------------------- */}
       <section
         id="contact"
-        className="pt-10 h-[1000px] max-w-[90%] mx-auto mt-32 bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent"
+        className="pt-10 h-[1000px] max-w-[90%] mx-auto mt-32"
       >
-        <h1 className="w-[80%] mx-auto text-4xl">Contact Me</h1>
+        <div className="w-[80%] mx-auto">
+          <h1 className="bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent text-4xl">
+            Contact Me
+          </h1>
+          <div className="flex flex-col gap-5 mt-5 pt-5 max-w-md">
+            <h2 className="text-xl">Get in touch</h2>
+            <p>
+              I am actively searching for full time career opportunities.
+              Whether you want to share a potential freelance or job opportunity
+              or just want to say hello, feel free to reach out!
+            </p>
+            <Link
+              href={"mailto:kenlu519@gmail.com"}
+              className={`border px-5 py-3 font-bold uppercase ${
+                theme === "light"
+                  ? "text-white bg-black"
+                  : "text-black bg-white"
+              } self-end`}
+            >
+              Contact me
+            </Link>
+          </div>
+        </div>
       </section>
 
       <footer></footer>
