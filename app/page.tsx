@@ -5,31 +5,15 @@ import { useTheme } from "next-themes";
 import Project from "./components/Project";
 import { ThemeSwitcher } from "./components/ThemeSwitcher";
 import { useState, useEffect, useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import { MailIcon, LinkedInIcon, GithubIcon } from "./components/SvgIcon";
 
 export default function Home() {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState<boolean>(false);
-
-  gsap.registerPlugin(useGSAP);
-  gsap.registerPlugin(ScrollTrigger);
-
-  const portfolioRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  useGSAP(() => {
-    const portfolio = portfolioRef.current;
-    gsap.to(portfolio, {
-      x: 500,
-      rotation: 360,
-      duration: 3,
-    });
-  }, []);
   if (!mounted) {
     return null; // Render nothing on the server
   }
@@ -46,12 +30,11 @@ export default function Home() {
         <ul className="after:block after:w-[0.2px] after:h-[150px] after:border-l-[0.2px] after:border-current after:mt-2 after:ml-[13px]">
           <li className="mb-5">
             <Link target="_blank" href={"https://github.com/kenyounot123"}>
-              <Image
+              <GithubIcon
                 className="transition ease-in-out duration-300 hover:rotate-[360deg]"
-                src="/github-mark.svg"
-                alt="aside icon"
                 width={30}
                 height={30}
+                fill={`${theme === "light" ? "black" : "white"}`}
               />
             </Link>
           </li>
@@ -60,23 +43,21 @@ export default function Home() {
               target="_blank"
               href={"https://www.linkedin.com/in/ken-h-lu/"}
             >
-              <Image
+              <LinkedInIcon
                 className="transition ease-in-out duration-300 hover:rotate-[360deg]"
-                src="/linkedin.svg"
-                alt="aside icon"
                 width={30}
                 height={30}
+                fill={`${theme === "light" ? "black" : "white"}`}
               />
             </Link>
           </li>
           <li className="mt-5">
             <Link href={"mailto:kenlu519@gmail.com"}>
-              <Image
-                className="transition ease-in-out duration-300 hover:rotate-[360deg]"
-                src="/mail.svg"
-                alt="aside icon"
+              <MailIcon
                 width={30}
                 height={30}
+                fill={`${theme === "light" ? "black" : "white"}`}
+                className="transition ease-in-out duration-300 hover:rotate-[360deg]"
               />
             </Link>
           </li>
@@ -126,7 +107,7 @@ export default function Home() {
             weightlifting, reading Manga, and playing video games. His most
             interesting fun fact is that he dreams of creating an app that
             everyone will use one day.
-            <div className="hidden min-[1500px]:block lg:absolute lg:right-0 lg:top-0 lg:translate-x-[100%] lg:-translate-y-[30%]">
+            <span className="hidden min-[1500px]:block lg:absolute lg:right-0 lg:top-0 lg:translate-x-[100%] lg:-translate-y-[30%]">
               {theme === "dark" ? (
                 <Image
                   className="transition duration-300 ease-in-out hover:-translate-y-5"
@@ -144,7 +125,7 @@ export default function Home() {
                   height={600}
                 />
               )}
-            </div>
+            </span>
           </p>
         </section>
         <nav className="mt-8 w-[80%] mx-auto">
@@ -186,7 +167,6 @@ export default function Home() {
 
       {/* -------------------------------------------- next section ----------------------------------------------------------- */}
       <section
-        ref={portfolioRef}
         id="portfolio"
         className="pt-10 min-h-[1000px] max-w-[90%] mx-auto mt-32"
       >

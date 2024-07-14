@@ -30,8 +30,7 @@ export default function Project({
             className="hover:scale-105 transition ease-in-out duration-300"
             alt="project screenshot"
             src={appImg}
-            layout="fill"
-            objectFit="scale-down" // or "contain", "fill", "scale-down"
+            fill
             quality={100}
           />
         </Link>
