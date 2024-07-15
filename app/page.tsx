@@ -255,8 +255,8 @@ export default function Home() {
               About Me
             </h1>
           </div>
-          <div className="lg:flex lg:gap-32 mt-5 pt-5">
-            <p className="max-w-[700px]">
+          <div className="gap-5 mt-5 pt-5">
+            <p className="max-w-[700px] mb-8">
               Hi! I&apos;m Ken, a recent graduate at Binghamton University
               eagerly seeking careers in software engineering. I graduated with
               a BA in Mathematics but realized I wanted to pursue a career in
@@ -274,15 +274,37 @@ export default function Home() {
               frameworks to work in! I am also currently learning TypeScript and
               Next.
             </p>
-            <div>
-              <Image
-                src={"/about-me.png"}
-                alt="dreams never die"
-                width="0"
-                height="0"
-                sizes="100vw"
-                className="w-full h-auto"
-              />
+            <div
+              className={`transition-transform duration-300 ease-in-out hover:scale-110 bg-gradient-to-tr from-[#E8C547] to-[#C20114] grow text-nowrap flex-nowrap flex flex-col flex-wrap-0 justify-center items-center border max-w-[500px] min-h-min shadow-lg 
+                ${theme === "light" ? "shadow-black" : "shadow-white"}`}
+            >
+              <h1 className="text-6xl uppercase tracking-widest">Wanted</h1>
+              <div
+                className={`w-[90%]  ${
+                  theme === "light"
+                    ? "border-black border-2"
+                    : "border-2 border-white"
+                }`}
+              >
+                <Image
+                  src={"/luffy.png"}
+                  width={0}
+                  height={0}
+                  className="w-full h-full object-cover"
+                  alt="wanted poster"
+                  sizes="100vw"
+                />
+              </div>
+              <div className="tracking-wide text-2xl uppercase">
+                React and Ruby on Rails
+              </div>
+              <div className="tracking-widest text-2xl md:text-5xl uppercase">
+                Ken H. Lu
+              </div>
+              <div className="tracking-widest text-2xl md:text-4xl">
+                $3,000,000,000
+              </div>
+              <div className="text-2xl md:text-4xl">FullStackDev</div>
             </div>
           </div>
         </div>
@@ -324,40 +346,6 @@ export default function Home() {
               >
                 Contact me
               </Link>
-            </div>
-            <div
-              className={`transition-transform duration-300 ease-in-out hover:scale-110 bg-gradient-to-tr from-[#E8C547] to-[#C20114] grow text-nowrap flex-nowrap flex flex-col flex-wrap-0 justify-center items-center border max-w-[650px] min-h-min shadow-lg 
-              ${theme === "light" ? "shadow-black" : "shadow-white"}`}
-            >
-              <h1 className="text-6xl md:text-8xl uppercase tracking-widest">
-                Wanted
-              </h1>
-              <div
-                className={`min-w-1/2 max-w-5/6 max-h-[450px] ${
-                  theme === "light"
-                    ? "border-black border-2"
-                    : "border-2 border-white"
-                }`}
-              >
-                <Image
-                  src={"/luffy.png"}
-                  width={0}
-                  height={0}
-                  className="w-full h-full object-contain"
-                  alt="wanted poster"
-                  sizes="100vw"
-                />
-              </div>
-              <div className="tracking-wide text-2xl md:text-3xl uppercase">
-                React and Ruby on Rails
-              </div>
-              <div className="tracking-widest text-2xl md:text-5xl uppercase">
-                Ken H. Lu
-              </div>
-              <div className="tracking-widest text-2xl md:text-4xl">
-                $3,000,000,000
-              </div>
-              <div className="text-2xl md:text-4xl">FullStackDev</div>
             </div>
           </div>
         </div>
