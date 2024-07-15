@@ -306,7 +306,7 @@ export default function Home() {
               Contact Me
             </h1>
           </div>
-          <div className="flex gap-24 flex-wrap justify-between">
+          <div className="flex gap-12 flex-wrap justify-between">
             <div className="flex flex-col gap-5 mt-5 pt-5 max-w-md">
               <h2 className="text-xl">Get in touch</h2>
               <p>
@@ -325,19 +325,39 @@ export default function Home() {
                 Contact me
               </Link>
             </div>
-            <div className="grow text-nowrap flex-nowrap flex flex-col flex-wrap-0 justify-center items-center border max-w-[650px] min-h-min shadow-lg shadow-white">
-              <h1 className="text-5xl md:text-8xl uppercase">Wanted</h1>
-              <div></div>
-              <div className="tracking-widest text-2xl md:text-5xl uppercase">
-                Dead or Alive
+            <div
+              className={`transition-transform duration-300 ease-in-out hover:scale-110 bg-gradient-to-tr from-[#E8C547] to-[#C20114] grow text-nowrap flex-nowrap flex flex-col flex-wrap-0 justify-center items-center border max-w-[650px] min-h-min shadow-lg 
+              ${theme === "light" ? "shadow-black" : "shadow-white"}`}
+            >
+              <h1 className="text-6xl md:text-8xl uppercase tracking-widest">
+                Wanted
+              </h1>
+              <div
+                className={`min-w-1/2 max-w-5/6 max-h-[450px] ${
+                  theme === "light"
+                    ? "border-black border-2"
+                    : "border-2 border-white"
+                }`}
+              >
+                <Image
+                  src={"/luffy.png"}
+                  width={0}
+                  height={0}
+                  className="w-full h-full object-contain"
+                  alt="wanted poster"
+                  sizes="100vw"
+                />
+              </div>
+              <div className="tracking-wide text-2xl md:text-3xl uppercase">
+                React and Ruby on Rails
               </div>
               <div className="tracking-widest text-2xl md:text-5xl uppercase">
                 Ken H. Lu
               </div>
               <div className="tracking-widest text-2xl md:text-4xl">
-                3,000,000,000
+                $3,000,000,000
               </div>
-              <div className="text-2xl md:text-4xl">FullSTackDev</div>
+              <div className="text-2xl md:text-4xl">FullStackDev</div>
             </div>
           </div>
         </div>
