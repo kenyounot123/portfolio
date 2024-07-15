@@ -24,7 +24,7 @@ export default function Project({
         reverse ? "md:flex-row-reverse" : null
       }`}
     >
-      <div className="md:self-center">
+      <div className="min-w-[300px] self-center">
         <Link target="_blank" rel="noopener noreferrer" href={projLink}>
           <Image
             className="hover:scale-105 transition ease-in-out duration-300 w-full auto object-fill"

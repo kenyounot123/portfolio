@@ -62,6 +62,8 @@ export default function Home() {
           </li>
         </ul>
       </aside>
+
+      {/* ----------------------------------- content starts here ------------------------------------------ */}
       <nav
         className={`py-1 flex ${
           theme === "dark" ? "bg-black" : "bg-white"
@@ -83,7 +85,7 @@ export default function Home() {
       </nav>
       <main className="flex flex-col min-w-[300px] w-full h-screen justify-center items-center max-w-[90%] mx-auto">
         <div className="relative w-[80%] mx-auto lg:self-center">
-          <div className="max-[500px]:hidden text-sm absolute top-0 right-0 -translate-y-[200%]">
+          <div className="max-[500px]:hidden text-sm absolute top-0 right-0 -translate-y-[50%] lg:-translate-y-[200%]">
             <ThemeSwitcher width={50} height={50} />
           </div>
           <p className="text-5xl max-[500px]:mt-32 bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent">
@@ -189,7 +191,7 @@ export default function Home() {
               alt="ship wheel"
             />
             <h1 className="text-4xl bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent">
-              Projects !
+              Projects
             </h1>
           </div>
           <Project
@@ -304,23 +306,39 @@ export default function Home() {
               Contact Me
             </h1>
           </div>
-          <div className="flex flex-col gap-5 mt-5 pt-5 max-w-md">
-            <h2 className="text-xl">Get in touch</h2>
-            <p>
-              I am actively searching for full time career opportunities.
-              Whether you want to share a potential freelance or job opportunity
-              or just want to say hello, feel free to reach out!
-            </p>
-            <Link
-              href={"mailto:kenlu519@gmail.com"}
-              className={`border px-5 py-3 font-bold uppercase transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ${
-                theme === "light"
-                  ? "text-white bg-black"
-                  : "text-black bg-white"
-              } self-end`}
-            >
-              Contact me
-            </Link>
+          <div className="flex gap-24 flex-wrap justify-between">
+            <div className="flex flex-col gap-5 mt-5 pt-5 max-w-md">
+              <h2 className="text-xl">Get in touch</h2>
+              <p>
+                I am actively searching for full time career opportunities.
+                Whether you w ant to share a potential freelance or job
+                opportunity or just want to say hello, feel free to reach out!
+              </p>
+              <Link
+                href={"mailto:kenlu519@gmail.com"}
+                className={`border px-5 py-3 font-bold uppercase transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ${
+                  theme === "light"
+                    ? "text-white bg-black"
+                    : "text-black bg-white"
+                } self-end`}
+              >
+                Contact me
+              </Link>
+            </div>
+            <div className="grow text-nowrap flex-nowrap flex flex-col flex-wrap-0 justify-center items-center border max-w-[650px] min-h-min shadow-lg shadow-white">
+              <h1 className="text-5xl md:text-8xl uppercase">Wanted</h1>
+              <div></div>
+              <div className="tracking-widest text-2xl md:text-5xl uppercase">
+                Dead or Alive
+              </div>
+              <div className="tracking-widest text-2xl md:text-5xl uppercase">
+                Ken H. Lu
+              </div>
+              <div className="tracking-widest text-2xl md:text-4xl">
+                3,000,000,000
+              </div>
+              <div className="text-2xl md:text-4xl">FullSTackDev</div>
+            </div>
           </div>
         </div>
       </section>
