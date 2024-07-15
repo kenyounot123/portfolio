@@ -15,9 +15,8 @@ export default function Home() {
   }, []);
 
   if (!mounted) {
-    return null; // Render nothing on the server
+    return null;
   }
-
   return (
     <>
       <aside className="hidden rotate-90 min-[330px]:block float-right fixed bottom-1/4 -right-14 md:-right-0">
@@ -31,7 +30,7 @@ export default function Home() {
           <li className="mb-5">
             <Link target="_blank" href={"https://github.com/kenyounot123"}>
               <GithubIcon
-                className="transition ease-in-out duration-300 hover:rotate-[360deg]"
+                className="transition-transform ease-in-out duration-300 hover:rotate-[360deg]"
                 width={30}
                 height={30}
                 fill={`${theme === "light" ? "black" : "white"}`}
@@ -44,7 +43,7 @@ export default function Home() {
               href={"https://www.linkedin.com/in/ken-h-lu/"}
             >
               <LinkedInIcon
-                className="transition ease-in-out duration-300 hover:rotate-[360deg]"
+                className="transition-transform ease-in-out duration-300 hover:rotate-[360deg]"
                 width={30}
                 height={30}
                 fill={`${theme === "light" ? "black" : "white"}`}
@@ -57,7 +56,7 @@ export default function Home() {
                 width={30}
                 height={30}
                 fill={`${theme === "light" ? "black" : "white"}`}
-                className="transition ease-in-out duration-300 hover:rotate-[360deg]"
+                className="transition-transform ease-in-out duration-300 hover:rotate-[360deg]"
               />
             </Link>
           </li>
@@ -65,8 +64,8 @@ export default function Home() {
       </aside>
       <nav
         className={`py-1 flex ${
-          theme === "dark" ? "bg-gray-500" : "bg-cyan-300"
-        } z-10 fixed justify-between w-full border min-[500px]:hidden`}
+          theme === "dark" ? "bg-black" : "bg-white"
+        } z-10 fixed justify-between w-full min-[500px]:hidden`}
       >
         <div>
           {theme === "dark" ? (
@@ -84,7 +83,7 @@ export default function Home() {
       </nav>
       <main className="flex flex-col min-w-[300px] w-full h-screen justify-center items-center max-w-[90%] mx-auto">
         <div className="relative w-[80%] mx-auto lg:self-center">
-          <div className="max-[500px]:hidden text-sm absolute top-0 right-0 -translate-y-[230%]">
+          <div className="max-[500px]:hidden text-sm absolute top-0 right-0 -translate-y-[200%]">
             <ThemeSwitcher width={50} height={50} />
           </div>
           <p className="text-5xl max-[500px]:mt-32 bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent">
@@ -110,7 +109,7 @@ export default function Home() {
             <span className="hidden min-[1500px]:block lg:absolute lg:right-0 lg:top-0 lg:translate-x-[100%] lg:-translate-y-[30%]">
               {theme === "dark" ? (
                 <Image
-                  className="transition duration-300 ease-in-out hover:-translate-y-5"
+                  className="transition-transform duration-300 ease-in-out hover:-translate-y-5"
                   alt="luffy"
                   src="/hero-img-white.png"
                   width={600}
@@ -119,7 +118,7 @@ export default function Home() {
               ) : (
                 <Image
                   alt="luffy"
-                  className="transition duration-300 ease-in-out hover:-translate-y-5"
+                  className="transition-transform duration-300 ease-in-out hover:-translate-y-5"
                   src="/hero-img.png"
                   width={600}
                   height={600}
@@ -128,41 +127,51 @@ export default function Home() {
             </span>
           </p>
         </section>
-        <nav className="mt-8 w-[80%] mx-auto">
-          <ul className=" mb-5">
-            <div className="flex">
-              <div>💻</div>
-              <Link
-                className="transition hover:translate-x-10 duration-300 underline underline-offset-2"
-                href="#portfolio"
-              >
-                Explore my portfolio
-              </Link>
-            </div>
-          </ul>
-          <ul className="mt-5">
-            <div className="flex">
-              <div>🧑</div>
-              <Link
-                className="transition hover:translate-x-10 duration-300 underline underline-offset-2"
-                href="#about"
-              >
-                Learn more about me{" "}
-              </Link>
-            </div>
-          </ul>
-          <ul className="mt-5">
-            <div className="flex">
-              <div>📨</div>
-              <Link
-                className="transition hover:translate-x-10 duration-300 underline underline-offset-2"
-                href="#contact"
-              >
-                Contact me{" "}
-              </Link>
-            </div>
-          </ul>
-        </nav>
+        <div className="w-[80%] mt-8 mx-auto flex space-between gap-10 md:gap-32">
+          <nav className="">
+            <ul className=" mb-5">
+              <div className="flex">
+                <div>💻</div>
+                <Link
+                  className="transition-transform hover:translate-x-10 duration-300 underline underline-offset-2"
+                  href="#portfolio"
+                >
+                  Explore my portfolio
+                </Link>
+              </div>
+            </ul>
+            <ul className="mt-5">
+              <div className="flex">
+                <div>🧑</div>
+                <Link
+                  className="transition-transform hover:translate-x-10 duration-300 underline underline-offset-2"
+                  href="#about"
+                >
+                  Learn more about me{" "}
+                </Link>
+              </div>
+            </ul>
+            <ul className="mt-5">
+              <div className="flex">
+                <div>📨</div>
+                <Link
+                  className="transition-transform hover:translate-x-10 duration-300 underline underline-offset-2"
+                  href="#contact"
+                >
+                  Contact me{" "}
+                </Link>
+              </div>
+            </ul>
+          </nav>
+          <Image
+            src={"/luffy.png"}
+            width={0}
+            height={0}
+            alt="luffy"
+            sizes="100vw"
+            className="max-[450px]:hidden block -translate-y-[20%] w-full h-auto max-w-[300px] max-h-[300px] min-[1500px]:hidden"
+          />
+        </div>
       </main>
 
       {/* -------------------------------------------- next section ----------------------------------------------------------- */}
@@ -171,9 +180,18 @@ export default function Home() {
         className="pt-10 min-h-[1000px] max-w-[90%] mx-auto mt-32"
       >
         <div className="w-[80%] mx-auto">
-          <h1 className="text-4xl mb-5 pb-5 bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent">
-            Projects !
-          </h1>
+          <div className="-ml-5 flex items-center">
+            <Image
+              className="transition-transform duration-300 ease-in-out hover:rotate-180"
+              src={"/wheel.png"}
+              width={100}
+              height={50}
+              alt="ship wheel"
+            />
+            <h1 className="text-4xl bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent">
+              Projects !
+            </h1>
+          </div>
           <Project
             projLink="https://messenger-app-0vcf.onrender.com/"
             appName="Messenger App"
@@ -223,9 +241,18 @@ export default function Home() {
         className="pt-10 h-[1000px] max-w-[90%] mx-auto mt-32"
       >
         <div className="mx-auto w-[80%]">
-          <h1 className="text-4xl bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent">
-            About Me
-          </h1>
+          <div className="flex -ml-5 items-center">
+            <Image
+              className="transition-transform duration-300 ease-in-out hover:rotate-180"
+              src={"/wheel.png"}
+              width={100}
+              height={50}
+              alt="ship wheel"
+            />
+            <h1 className="text-4xl bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent">
+              About Me
+            </h1>
+          </div>
           <div className="lg:flex lg:gap-32 mt-5 pt-5">
             <p className="max-w-[700px]">
               Hi! I&apos;m Ken, a recent graduate at Binghamton University
@@ -265,9 +292,18 @@ export default function Home() {
         className="pt-10 h-[1000px] max-w-[90%] mx-auto mt-32"
       >
         <div className="w-[80%] mx-auto">
-          <h1 className="bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent text-4xl">
-            Contact Me
-          </h1>
+          <div className="flex -ml-5 items-center">
+            <Image
+              className="transition-transform duration-300 ease-in-out hover:rotate-180"
+              src={"/wheel.png"}
+              width={100}
+              height={50}
+              alt="ship wheel"
+            />
+            <h1 className="bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent text-4xl">
+              Contact Me
+            </h1>
+          </div>
           <div className="flex flex-col gap-5 mt-5 pt-5 max-w-md">
             <h2 className="text-xl">Get in touch</h2>
             <p>
@@ -277,7 +313,7 @@ export default function Home() {
             </p>
             <Link
               href={"mailto:kenlu519@gmail.com"}
-              className={`border px-5 py-3 font-bold uppercase ${
+              className={`border px-5 py-3 font-bold uppercase transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ${
                 theme === "light"
                   ? "text-white bg-black"
                   : "text-black bg-white"
