@@ -278,7 +278,9 @@ export default function Home() {
               className={`transition-transform duration-300 ease-in-out hover:scale-110 bg-gradient-to-tr from-[#E8C547] to-[#C20114] grow text-nowrap flex-nowrap flex flex-col flex-wrap-0 justify-center items-center border max-w-[500px] min-h-min shadow-lg 
                 ${theme === "light" ? "shadow-black" : "shadow-white"}`}
             >
-              <h1 className="text-6xl uppercase tracking-widest">Wanted</h1>
+              <h1 className="text-4xl min-[400px]:text-5xl md:text-6xl uppercase tracking-widest">
+                Wanted
+              </h1>
               <div
                 className={`w-[90%]  ${
                   theme === "light"
@@ -295,13 +297,13 @@ export default function Home() {
                   sizes="100vw"
                 />
               </div>
-              <div className="tracking-wide text-2xl uppercase">
+              <div className="md:tracking-wide text-sm min-[400px]:text-xl md:text-3xl uppercase">
                 React and Ruby on Rails
               </div>
-              <div className="tracking-widest text-2xl md:text-5xl uppercase">
+              <div className="md:tracking-widest text-2xl md:text-5xl uppercase">
                 Ken H. Lu
               </div>
-              <div className="tracking-widest text-2xl md:text-4xl">
+              <div className="md:tracking-widest text-2xl md:text-4xl">
                 $3,000,000,000
               </div>
               <div className="text-2xl md:text-4xl">FullStackDev</div>
