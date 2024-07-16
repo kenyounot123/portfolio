@@ -45,7 +45,7 @@ export default function Project({
         <p className="py-5">{appDescription}</p>
         <div className="flex gap-5 flex-wrap">
           {techStack.map((lang, index) => (
-            <div className="text-nowrap rounded-3xl p-2" key={index}>
+            <div className="text-nowrap rounded-3xl py-2" key={index}>
               {lang}
             </div>
           ))}

@@ -83,7 +83,10 @@ export default function Home() {
         </div>
         <ThemeSwitcher width={30} height={30} />
       </nav>
-      <main className="flex flex-col min-w-[300px] w-full h-screen justify-center items-center max-w-[90%] mx-auto">
+      <main
+        id="home"
+        className="flex flex-col min-w-[300px] w-full h-screen justify-center items-center max-w-[90%] mx-auto"
+      >
         <div className="relative w-[80%] mx-auto lg:self-center">
           <div className="max-[500px]:hidden text-sm absolute top-0 right-0 -translate-y-[50%] lg:-translate-y-[200%]">
             <ThemeSwitcher width={50} height={50} />
@@ -129,7 +132,7 @@ export default function Home() {
             </span>
           </p>
         </section>
-        <div className="w-[80%] mt-8 mx-auto flex space-between gap-10 md:gap-32">
+        <div className="w-[80%] mt-8 mx-auto flex justify-between gap-10 md:gap-32">
           <nav className="">
             <ul className=" mb-5">
               <div className="flex">
@@ -238,44 +241,78 @@ export default function Home() {
       </section>
 
       {/* -------------------------------------------- next section ----------------------------------------------------------- */}
-      <section
-        id="about"
-        className="pt-10 h-[1000px] max-w-[90%] mx-auto mt-32"
-      >
+      <section id="about" className="pt-10 max-w-[90%] mx-auto py-32">
         <div className="mx-auto w-[80%]">
-          <div className="flex -ml-5 items-center">
-            <Image
-              className="transition-transform duration-300 ease-in-out hover:rotate-180"
-              src={"/wheel.png"}
-              width={100}
-              height={50}
-              alt="ship wheel"
-            />
-            <h1 className="text-4xl bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent">
-              About Me
-            </h1>
-          </div>
-          <div className="gap-5 mt-5 pt-5">
-            <p className="max-w-[700px] mb-8">
-              Hi! I&apos;m Ken, a recent graduate at Binghamton University
-              eagerly seeking careers in software engineering. I graduated with
-              a BA in Mathematics but realized I wanted to pursue a career in
-              Software Development at the end of my Junior year. I began my web
-              development journey completely self-taught through{" "}
-              <Link
-                href="https://www.theodinproject.com"
-                className="underline underline-offset-2"
-              >
-                The Odin Project
-              </Link>
-              . Over the year, I have developed a strong foundation in HTML,
-              CSS, and JavaScript and mastered the art of building responsive
-              web pages. Currently, Ruby on Rails and React are my favorite
-              frameworks to work in! I am also currently learning TypeScript and
-              Next.
-            </p>
+          <div className="lg:flex gap-5 mt-5 pt-5 lg:justify-between">
+            <div className="flex flex-col max-w-[700px] mb-8 gap-12 basis-1/2">
+              <div className="flex -ml-5 items-center">
+                <Image
+                  className="transition-transform duration-300 ease-in-out hover:rotate-180"
+                  src={"/wheel.png"}
+                  width={100}
+                  height={50}
+                  alt="ship wheel"
+                />
+                <h1 className="text-4xl bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent">
+                  About Me
+                </h1>
+              </div>
+              <p>
+                Hi! I&apos;m Ken, a recent graduate at Binghamton University
+                eagerly seeking careers in software engineering. I graduated
+                with a BA in Mathematics but realized I wanted to pursue a
+                career in Software Development at the end of my Junior year. I
+                began my web development journey completely self-taught through{" "}
+                <Link
+                  href="https://www.theodinproject.com"
+                  className="underline underline-offset-2"
+                >
+                  The Odin Project
+                </Link>
+                . Over the year, I have developed a strong foundation in HTML,
+                CSS, and JavaScript and mastered the art of building responsive
+                web pages. Currently, Ruby on Rails and React are my favorite
+                frameworks to work in! I am also currently learning TypeScript
+                and Next.
+              </p>
+              <div className="">
+                <div className="flex -ml-5 items-center">
+                  <Image
+                    className="transition-transform duration-300 ease-in-out hover:rotate-180"
+                    src={"/wheel.png"}
+                    width={100}
+                    height={50}
+                    alt="ship wheel"
+                  />
+                  <h1 className="bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent text-4xl">
+                    Contact Me
+                  </h1>
+                </div>
+                <div className="flex gap-12 flex-wrap justify-between">
+                  <div className="flex flex-col gap-5 mt-5 pt-5 max-w-md">
+                    <h2 className="text-xl">Get in touch</h2>
+                    <p>
+                      I am actively searching for full time career
+                      opportunities. Whether you want to share a potential
+                      freelance or job opportunity or just want to say hello,
+                      feel free to reach out!
+                    </p>
+                    <Link
+                      href={"mailto:kenlu519@gmail.com"}
+                      className={`border px-5 py-3 font-bold uppercase transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ${
+                        theme === "light"
+                          ? "text-white bg-black"
+                          : "text-black bg-white"
+                      } self-end`}
+                    >
+                      Contact me
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div
-              className={`transition-transform duration-300 ease-in-out hover:scale-110 bg-gradient-to-tr from-[#E8C547] to-[#C20114] grow text-nowrap flex-nowrap flex flex-col flex-wrap-0 justify-center items-center border max-w-[500px] min-h-min shadow-lg 
+              className={`basis-1/2 shrink-1 transition-transform duration-300 ease-in-out hover:scale-110 bg-gradient-to-tr from-[#E8C547] to-[#C20114] grow text-nowrap flex-nowrap flex flex-col flex-wrap-0 justify-center items-center border w-full max-w-[500px] h-min shadow-lg 
                 ${theme === "light" ? "shadow-black" : "shadow-white"}`}
             >
               <h1 className="text-4xl min-[400px]:text-5xl md:text-6xl uppercase tracking-widest">
@@ -311,49 +348,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* -------------------------------------------- next section ----------------------------------------------------------- */}
-      <section
-        id="contact"
-        className="pt-10 h-[1000px] max-w-[90%] mx-auto mt-32"
-      >
-        <div className="w-[80%] mx-auto">
-          <div className="flex -ml-5 items-center">
-            <Image
-              className="transition-transform duration-300 ease-in-out hover:rotate-180"
-              src={"/wheel.png"}
-              width={100}
-              height={50}
-              alt="ship wheel"
-            />
-            <h1 className="bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent text-4xl">
-              Contact Me
-            </h1>
-          </div>
-          <div className="flex gap-12 flex-wrap justify-between">
-            <div className="flex flex-col gap-5 mt-5 pt-5 max-w-md">
-              <h2 className="text-xl">Get in touch</h2>
-              <p>
-                I am actively searching for full time career opportunities.
-                Whether you w ant to share a potential freelance or job
-                opportunity or just want to say hello, feel free to reach out!
-              </p>
-              <Link
-                href={"mailto:kenlu519@gmail.com"}
-                className={`border px-5 py-3 font-bold uppercase transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ${
-                  theme === "light"
-                    ? "text-white bg-black"
-                    : "text-black bg-white"
-                } self-end`}
-              >
-                Contact me
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <footer></footer>
+      <div className="w-[80%] mx-auto text-center pb-5">
+        <Link href={"#home"}> Back To Top</Link>
+      </div>
     </>
   );
 }
