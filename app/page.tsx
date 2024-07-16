@@ -132,7 +132,7 @@ export default function Home() {
             </span>
           </p>
         </section>
-        <div className="w-[80%] mt-8 mx-auto flex justify-between gap-10 md:gap-32">
+        <div className="w-[80%] mt-8 mx-auto min-[700px]:flex md:justify-between">
           <nav className="">
             <ul className=" mb-5">
               <div className="flex">
@@ -174,7 +174,7 @@ export default function Home() {
             height={0}
             alt="luffy"
             sizes="100vw"
-            className="max-[450px]:hidden block -translate-y-[20%] w-full h-auto max-w-[300px] max-h-[300px] min-[1500px]:hidden"
+            className="max-[450px]:hidden block min-[700px]:-translate-y-[20%] w-full h-auto max-w-[300px] max-h-[300px] min-[1500px]:hidden"
           />
         </div>
       </main>
@@ -276,7 +276,7 @@ export default function Home() {
                 and Next.
               </p>
               <div className="">
-                <div className="flex -ml-5 items-center">
+                <div id="contact" className="flex -ml-5 items-center">
                   <Image
                     className="transition-transform duration-300 ease-in-out hover:rotate-180"
                     src={"/wheel.png"}
@@ -312,7 +312,7 @@ export default function Home() {
               </div>
             </div>
             <div
-              className={`basis-1/2 shrink-1 transition-transform duration-300 ease-in-out hover:scale-110 bg-gradient-to-tr from-[#E8C547] to-[#C20114] grow text-nowrap flex-nowrap flex flex-col flex-wrap-0 justify-center items-center border w-full max-w-[500px] h-min shadow-lg 
+              className={`mx-auto md:mx-0 basis-1/2 shrink-1 transition-transform duration-300 ease-in-out hover:scale-110 bg-gradient-to-tr from-[#E8C547] to-[#C20114] grow text-nowrap flex-nowrap flex flex-col flex-wrap-0 justify-center items-center border w-full max-w-[500px] h-min shadow-lg 
                 ${theme === "light" ? "shadow-black" : "shadow-white"}`}
             >
               <h1 className="text-4xl min-[400px]:text-5xl md:text-6xl uppercase tracking-widest">
