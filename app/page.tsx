@@ -104,13 +104,9 @@ export default function Home() {
             </span>{" "}
             specializing in <span className="italic">Ruby on Rails</span> and{" "}
             <span className="italic">React</span>, with a strong background in
-            HTML, CSS, and JS. He is a recent graduate at Binghamton University
-            with a BA in Mathematics, indicative of his strong problem solving
-            and analytical skills. Outside of his endless grind to become the
-            pirate king, you can often find him at the gym doing his Olympic
-            weightlifting, reading Manga, and playing video games. His most
-            interesting fun fact is that he dreams of creating an app that
-            everyone will use one day.
+            HTML, CSS, and JS. He is based in Brooklyn, NY with roughly a year
+            of experience and is a recent graduate at Binghamton University with
+            a BA in Mathematics.
             <span className="hidden min-[1500px]:block lg:absolute lg:right-0 lg:top-0 lg:translate-x-[100%] lg:-translate-y-[30%]">
               {theme === "dark" ? (
                 <Image
@@ -273,7 +269,10 @@ export default function Home() {
                 CSS, and JavaScript and mastered the art of building responsive
                 web pages. Currently, Ruby on Rails and React are my favorite
                 frameworks to work in! I am also currently learning TypeScript
-                and Next.
+                and Next. Outside of my endless grind to become the pirate king,
+                you can often find me at the gym weightlifting, or reading
+                Manga, and playing video games. My most interesting fun fact is
+                that I dream of creating an app that everyone will use one day.
               </p>
               <div className="">
                 <div id="contact" className="flex -ml-5 items-center">
