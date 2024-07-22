@@ -104,7 +104,8 @@ export default function Home() {
             </span>{" "}
             specializing in <span className="italic">Ruby on Rails</span> and{" "}
             <span className="italic">React</span>, with a strong background in
-            HTML, CSS, and JS. He is based in Brooklyn, NY with roughly a year
+            HTML, CSS, and JS. <br /><br />
+            He is based in Brooklyn, NY with roughly a year
             of experience and is a recent graduate at Binghamton University with
             a BA in Mathematics.
             <span className="hidden min-[1500px]:block lg:absolute lg:right-0 lg:top-0 lg:translate-x-[100%] lg:-translate-y-[30%]">
@@ -255,9 +256,7 @@ export default function Home() {
               </div>
               <p>
                 Hi! I&apos;m Ken, a recent graduate at Binghamton University
-                eagerly seeking careers in software engineering. I graduated
-                with a BA in Mathematics but realized I wanted to pursue a
-                career in Software Development at the end of my Junior year. I
+                eagerly seeking careers in software engineering. I
                 began my web development journey completely self-taught through{" "}
                 <Link
                   href="https://www.theodinproject.com"
@@ -265,14 +264,15 @@ export default function Home() {
                 >
                   The Odin Project
                 </Link>
-                . Over the year, I have developed a strong foundation in HTML,
+                . <br />
+                Over the year, I have developed a strong foundation in HTML,
                 CSS, and JavaScript and mastered the art of building responsive
                 web pages. Currently, Ruby on Rails and React are my favorite
-                frameworks to work in! I am also currently learning TypeScript
+                frameworks to work in! <br />
+                I am also currently learning TypeScript
                 and Next. Outside of my endless grind to become the pirate king,
                 you can often find me at the gym weightlifting, or reading
-                Manga, and playing video games. My most interesting fun fact is
-                that I dream of creating an app that everyone will use one day.
+                Manga, and playing video games.
               </p>
               <div className="">
                 <div id="contact" className="flex -ml-5 items-center">
