@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ken Lu | Software Engineer, Developer, Designer",
     description: "Ken Lu is a software engineer specializing in React, Rails, HTML, and CSS. Explore his portfolio, projects, and design work.",
-    // url: "https://yourwebsite.com",  // Replace with your actual website URL
+    url: "https://ken-lu.dev",  // Replace with your actual website URL
     type: "website",
     images: "/luffy.png",  // Replace with the actual URL of the image you want to use
   }
