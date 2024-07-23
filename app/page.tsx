@@ -72,13 +72,13 @@ export default function Home() {
         <div>
           {theme === "dark" ? (
             <Image
-              alt="luffy"
+              alt="Ken Lu"
               src="/hero-img-white.png"
               width={30}
               height={30}
             />
           ) : (
-            <Image alt="luffy" src="/hero-img.png" width={30} height={30} />
+            <Image alt="Ken Lu" src="/hero-img.png" width={30} height={30} />
           )}
         </div>
         <ThemeSwitcher width={30} height={30} />
@@ -91,10 +91,10 @@ export default function Home() {
           <div className="max-[500px]:hidden text-sm absolute top-0 right-0 -translate-y-[50%] lg:-translate-y-[200%]">
             <ThemeSwitcher width={50} height={50} />
           </div>
-          <p className="text-5xl max-[500px]:mt-32 bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent">
+          <h1 className="text-5xl max-[500px]:mt-32 bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent">
             Ken Lu
-          </p>
-          <p className="text-2xl">Full Stack Web Developer</p>
+          </h1>
+          <h2 className="text-2xl">Full Stack Web Developer</h2>
         </div>
         <section className="mt-8 w-[80%] mx-auto">
           <p className="lg:relative max-w-[700px]">
@@ -112,14 +112,14 @@ export default function Home() {
               {theme === "dark" ? (
                 <Image
                   className="transition-transform duration-300 ease-in-out hover:-translate-y-5"
-                  alt="luffy"
+                  alt="Ken Lu"
                   src="/hero-img-white.png"
                   width={600}
                   height={600}
                 />
               ) : (
                 <Image
-                  alt="luffy"
+                  alt="Ken Lu"
                   className="transition-transform duration-300 ease-in-out hover:-translate-y-5"
                   src="/hero-img.png"
                   width={600}
@@ -169,7 +169,7 @@ export default function Home() {
             src={"/luffy.png"}
             width={0}
             height={0}
-            alt="luffy"
+            alt="Ken Lu"
             sizes="100vw"
             className="max-[450px]:hidden block min-[700px]:-translate-y-[20%] w-full h-auto max-w-[300px] max-h-[300px] min-[1500px]:hidden"
           />
@@ -188,7 +188,7 @@ export default function Home() {
               src={"/wheel.png"}
               width={100}
               height={50}
-              alt="ship wheel"
+              alt="Ken Lu"
             />
             <h1 className="text-4xl bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent">
               Projects
@@ -248,7 +248,7 @@ export default function Home() {
                   src={"/wheel.png"}
                   width={100}
                   height={50}
-                  alt="ship wheel"
+                  alt="Ken Lu"
                 />
                 <h1 className="text-4xl bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent">
                   About Me
@@ -265,7 +265,7 @@ export default function Home() {
                   The Odin Project
                 </Link>
                 . <br />
-                Over the year, I have developed a strong foundation in HTML,
+                Over the years, I have developed a strong foundation in HTML,
                 CSS, and JavaScript and mastered the art of building responsive
                 web pages. Currently, Ruby on Rails and React are my favorite
                 frameworks to work in! <br />
@@ -281,7 +281,7 @@ export default function Home() {
                     src={"/wheel.png"}
                     width={100}
                     height={50}
-                    alt="ship wheel"
+                    alt="Ken Lu"
                   />
                   <h1 className="bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent text-4xl">
                     Contact Me
@@ -329,7 +329,7 @@ export default function Home() {
                   width={0}
                   height={0}
                   className="w-full h-full object-cover"
-                  alt="wanted poster"
+                  alt="Ken Lu"
                   sizes="100vw"
                 />
               </div>
