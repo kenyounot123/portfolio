@@ -132,7 +132,7 @@ export default function Home() {
         <div className="w-[80%] mt-8 mx-auto min-[700px]:flex md:justify-between">
           <nav className="">
             <ul className=" mb-5">
-              <div className="flex">
+              <div className="flex gap-1">
                 <div>💻</div>
                 <Link
                   className="transition-transform hover:translate-x-10 duration-300 underline underline-offset-2"
@@ -143,7 +143,7 @@ export default function Home() {
               </div>
             </ul>
             <ul className="mt-5">
-              <div className="flex">
+              <div className="flex gap-1">
                 <div>🧑</div>
                 <Link
                   className="transition-transform hover:translate-x-10 duration-300 underline underline-offset-2"
@@ -154,13 +154,15 @@ export default function Home() {
               </div>
             </ul>
             <ul className="mt-5">
-              <div className="flex">
-                <div>📨</div>
+              <div className="flex gap-1">
+                <div>📝</div>
                 <Link
                   className="transition-transform hover:translate-x-10 duration-300 underline underline-offset-2"
-                  href="#contact"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="/resume.pdf"
                 >
-                  Contact me{" "}
+                  Resume{" "}
                 </Link>
               </div>
             </ul>
