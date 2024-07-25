@@ -88,7 +88,7 @@ export default function Home() {
         className="flex flex-col min-w-[300px] w-full h-screen justify-center items-center max-w-[90%] mx-auto"
       >
         <div className="relative w-[80%] mx-auto lg:self-center">
-          <div className="max-[500px]:hidden text-sm absolute top-0 right-0 -translate-y-[50%] lg:-translate-y-[200%]">
+          <div className="max-[500px]:hidden text-sm absolute top-0 right-0 -translate-y-[50%] lg:-translate-y-[110%]">
             <ThemeSwitcher width={50} height={50} />
           </div>
           <h1 className="text-5xl max-[500px]:mt-32 bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent">
