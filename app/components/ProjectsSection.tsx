@@ -20,7 +20,7 @@ export default function ProjectSection() {
             </h1>
           </div>
           <Project
-            projLink="https://messenger-app-0vcf.onrender.com/"
+            projLink="https://github.com/kenyounot123/messenger-app"
             appName="Messenger App"
             appRole="Full Stack Developer"
             appDescription="A web-based messaging app that allows users to send messages to
