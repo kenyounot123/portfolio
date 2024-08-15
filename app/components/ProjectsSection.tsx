@@ -20,6 +20,15 @@ export default function ProjectSection() {
             </h1>
           </div>
           <Project
+            projLink="https://flashprepai.com"
+            appName="Flash Prep AI"
+            appRole="Co-Founder and Software Engineer"
+            appDescription="This app leverages AI to generate personalized flashcards that adapt to your learning style, helping you retain information more effectively and enhance your study sessions."
+            techStack={["Nextjs", "React", "Firebase", "Vercel", "Stripe API"]}
+            appImg="/flashprepai.png"
+            reverse={false}
+          />
+          <Project
             projLink="https://github.com/kenyounot123/messenger-app"
             appName="Messenger App"
             appRole="Full Stack Developer"
@@ -48,15 +57,6 @@ export default function ProjectSection() {
             appDescription="Binghamton University's Annual Hackathon winning project! A simple quiz that would help users find a club to join in Binghamton University based off their interests."
             techStack={["Git", "Python", "Vanilla CSS", "Vanilla JavaScript"]}
             appImg="/hackathon.png"
-            reverse={false}
-          />
-          <Project
-            projLink="github.com/kenyounot123/Social-media-clone"
-            appName="Stellar"
-            appRole="Full Stack Developer"
-            appDescription="Created a full-stack social media site consisting of the core user functionalities of any social media apps such as Facebook, Twitter, threads, etc."
-            techStack={["Ruby on Rails", "Hotwire", "Postgresql", "StimulusJS"]}
-            appImg="/stellar.png"
             reverse={false}
           />
         </div>
