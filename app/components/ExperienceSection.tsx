@@ -21,7 +21,7 @@ export default function ExperienceSection() {
           <li className="mb-10 ms-4">
             <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white"></div>
             <time className="mb-1 text-sm font-normal leading-none">
-              Aug 2024
+              August 2024
             </time>
             <h3 className="text-lg font-semibold">
               Software Engineer & Co-Founder
