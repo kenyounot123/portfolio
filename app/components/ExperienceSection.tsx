@@ -29,7 +29,7 @@ export default function ExperienceSection() {
             <p className="text-base font-normal">
               Created and launched an AI-powered flashcard application using
               Next.js, React, and TypeScript, integrating OpenAI for content
-              generation and Clerk for user authentication, serving over 1,000
+              generation and Clerk for user authentication, serving over 200
               active users.
             </p>
             <Link
