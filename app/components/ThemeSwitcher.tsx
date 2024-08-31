@@ -20,7 +20,7 @@ export function ThemeSwitcher({ width, height }: ThemeSwitcherProps) {
   if (!mounted) return null;
 
   return (
-    <div>
+    <>
       {theme === "light" ? (
         <button onClick={() => setTheme("dark")}>
           <Image
@@ -43,6 +43,6 @@ export function ThemeSwitcher({ width, height }: ThemeSwitcherProps) {
           />
         </button>
       )}
-    </div>
+    </>
   );
 }

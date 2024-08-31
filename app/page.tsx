@@ -10,6 +10,9 @@ import HomeContent from "./components/HomeContent";
 import LeftAsideNav from "./components/LeftAside";
 import RightAsideNav from "./components/RightAside";
 import ExperienceSection from "./components/ExperienceSection";
+import { motion } from 'framer-motion'
+import { ChevronUp } from "lucide-react";
+import ContactSection from "./components/ContactSection";
 
 export default function Home() {
   const { theme } = useTheme();
@@ -27,38 +30,26 @@ export default function Home() {
       <RightAsideNav/>
       {/* ----------------------------------- content starts here ------------------------------------------ */}
       <nav
-        className={`py-1 flex ${
-          theme === "dark" ? "bg-black" : "bg-white"
-        } z-10 fixed justify-between w-full min-[500px]:hidden`}
+        className={`py-2 px-4 flex ${
+          theme === "dark" ? "bg-black/80" : "bg-white/80"
+        } backdrop-blur-sm z-20 fixed top-4 left-1/2 -translate-x-1/2 justify-between items-center rounded-full shadow-lg`}
       >
-        <div>
-          {theme === "dark" ? (
-            <Image
-              alt="Ken Lu"
-              src="/hero-img-white.png"
-              width={30}
-              height={30}
-            />
-          ) : (
-            <Image alt="Ken Lu" src="/hero-img.png" width={30} height={30} />
-          )}
+        <div className="flex items-center space-x-4">
+          <Image
+            alt="Ken Lu"
+            src={theme === "dark" ? "/hero-img-white.png" : "/hero-img.png"}
+            width={30}
+            height={30}
+          />
+          <Link href="#home" className="hover:text-gray-600">Home</Link>
+          <Link href="#projects" className="hover:text-gray-600">Projects</Link>
+          <Link href="#experience" className="hover:text-gray-600">Experience</Link>
+          <Link href="#about" className="hover:text-gray-600">About</Link>
+          <ThemeSwitcher width={30} height={30} />
         </div>
-        <ThemeSwitcher width={30} height={30} />
       </nav>
-      <main
-        id="home"
-        className="flex flex-col min-w-[300px] w-full h-screen justify-center items-center max-w-[90%] mx-auto"
-      >
-        <div className="relative w-[80%] mx-auto lg:self-center">
-          <div className="max-[500px]:hidden text-sm absolute top-0 right-0 -translate-y-[50%] lg:-translate-y-[110%]">
-            <ThemeSwitcher width={50} height={50} />
-          </div>
-          <h1 className="text-5xl max-[500px]:mt-32 bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent">
-            Ken Lu
-          </h1>
-          <h2 className="text-2xl">Full Stack Web Developer</h2>
-        </div>
-        <HomeContent/>
+      <main className="container mx-auto pt-32 pb-48">
+        <HomeContent />
       </main>
       {/* -------------------------------------------- next section ----------------------------------------------------------- */}
       <ProjectSection/>
@@ -66,8 +57,17 @@ export default function Home() {
       <ExperienceSection/>
       {/* -------------------------------------------- next section ----------------------------------------------------------- */}
       <AboutSection/>
-      <div className="w-[80%] mx-auto text-center pb-5">
-        <Link href={"#home"}> Back To Top</Link>
+      <ContactSection/>
+      <div 
+        className="mt-8 text-center mb-10"
+      >
+        <Link 
+          href="#home" 
+          className="inline-flex items-center px-6 py-3 text-base font-medium text-primary-foreground dark:bg-neutral-800 bg-black rounded-full hover:bg-black/90 transition-colors duration-200 hover:scale-[1.05] transition-transform duration-200 ease-in-out"
+        >
+          Back To Top
+          <ChevronUp className="w-5 h-5 ms-2" />
+        </Link>
       </div>
     </>
   );

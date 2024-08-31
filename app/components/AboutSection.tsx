@@ -1,117 +1,113 @@
+'use client'
+
+import { useState } from 'react'
 import Image from "next/image"
 import Link from "next/link"
 import { useTheme } from "next-themes"
+import { motion } from 'framer-motion'
+import { Mail, ExternalLink } from 'lucide-react'
+
+const SectionTitle = ({ title }: { title: string }) => (
+  <motion.div 
+    className="flex items-center mb-8"
+    initial={{ opacity: 0, x: -50 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.5 }}
+  >
+    <div className="relative w-16 h-16 mr-4">
+      <Image
+        className="transition-transform duration-300 ease-in-out hover:rotate-180"
+        src="/wheel.png"
+        layout="fill"
+        objectFit="contain"
+        alt={`${title} icon`}
+      />
+    </div>
+    <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#E8C547] to-[#C20114] bg-clip-text text-transparent">
+      {title}
+    </h2>
+  </motion.div>
+)
+
 export default function AboutSection() {
   const { theme } = useTheme()
+  const [isHovered, setIsHovered] = useState(false)
+
   return (
-    <section id="about" className="pt-10 max-w-[90%] mx-auto py-32">
-        <div className="mx-auto w-[80%]">
-          <div className="lg:flex gap-5 mt-5 pt-5 lg:justify-between">
-            <div className="flex flex-col max-w-[700px] mb-8 gap-12 basis-1/2">
-              <div className="flex -ml-5 items-center">
-                <Image
-                  className="transition-transform duration-300 ease-in-out hover:rotate-180"
-                  src={"/wheel.png"}
-                  width={100}
-                  height={50}
-                  alt="Ken Lu"
-                />
-                <h1 className="text-4xl bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent">
-                  About Me
-                </h1>
-              </div>
-              <p>
-                Hi! I&apos;m Ken, a recent graduate at Binghamton University
-                eagerly seeking careers in software engineering. I
-                began my web development journey completely self-taught through{" "}
-                <Link
-                  href="https://www.theodinproject.com"
-                  className="underline underline-offset-2"
-                >
-                  The Odin Project
-                </Link>
-                . 
-                Over the years, I have developed a strong foundation in HTML,
-                CSS, and JavaScript and mastered the art of building responsive
-                web pages. Currently, Ruby on Rails and React are my favorite
-                frameworks to work in! 
-                I am also currently learning TypeScript
-                and Next. Outside of my endless grind to become the pirate king,
-                you can often find me at the gym weightlifting, or reading
-                Manga, and playing video games.
-              </p>
-              <div className="">
-                <div id="contact" className="flex -ml-5 items-center">
-                  <Image
-                    className="transition-transform duration-300 ease-in-out hover:rotate-180"
-                    src={"/wheel.png"}
-                    width={100}
-                    height={50}
-                    alt="Ken Lu"
-                  />
-                  <h1 className="bg-gradient-to-tr from-[#E8C547] to-[#C20114] bg-clip-text text-transparent text-4xl">
-                    Contact Me
-                  </h1>
-                </div>
-                <div className="flex gap-12 flex-wrap justify-between">
-                  <div className="flex flex-col gap-5 mt-5 pt-5 max-w-md">
-                    <h2 className="text-xl">Get in touch</h2>
-                    <p>
-                      I am actively searching for full time career
-                      opportunities. Whether you want to share a potential
-                      freelance or job opportunity or just want to say hello,
-                      feel free to reach out!
-                    </p>
-                    <Link
-                      href={"mailto:kenlu519@gmail.com"}
-                      className={`border px-5 py-3 font-bold uppercase transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 ${
-                        theme === "light"
-                          ? "text-white bg-black"
-                          : "text-black bg-white"
-                      } self-end`}
-                    >
-                      Contact me
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className={`mx-auto md:mx-0 basis-1/2 shrink-1 transition-transform duration-300 ease-in-out hover:scale-110 bg-gradient-to-tr from-[#E8C547] to-[#C20114] grow text-nowrap flex-nowrap flex flex-col flex-wrap-0 justify-center items-center border w-full max-w-[500px] h-min shadow-lg 
-                ${theme === "light" ? "shadow-black" : "shadow-white"}`}
-            >
-              <h1 className="text-4xl min-[400px]:text-5xl md:text-6xl uppercase tracking-widest">
-                Wanted
-              </h1>
-              <div
-                className={`w-[90%]  ${
-                  theme === "light"
-                    ? "border-black border-2"
-                    : "border-2 border-white"
-                }`}
+    <section id="about" className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+      <div className="lg:flex lg:gap-12 lg:items-start">
+        <motion.div 
+          className="lg:w-3/5 mb-12 lg:mb-0"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <SectionTitle title="About Me" />
+          <div className="space-y-6 text-xl">
+            <p>
+              hi, my name&apos;s Ken.
+            </p>
+            <p>
+              i am self-taught and learned from {' '}
+              <Link
+                href="https://www.theodinproject.com"
+                className="underline underline-offset-2 hover:text-primary/80 transition-colors duration-200"
+                target="_blank"
+                rel="noopener noreferrer"
               >
+                The Odin Project
+              </Link>.
+            </p>
+            <p>
+              i love playing pickleball, reading manga, and exercising
+            </p>
+            <p>
+              i also love one piece
+            </p>
+            <p>
+              long term, i hope to 😬 change the world 😬, or something like that 
+            </p>
+          </div>
+
+        </motion.div>
+
+        <motion.div
+          className="lg:w-2/5"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div
+            className={`mx-auto max-w-[500px] aspect-[3/4] relative overflow-hidden rounded-lg shadow-xl ${
+              theme === 'light' ? 'shadow-black/20' : 'shadow-white/20'
+            }`}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-tr from-[#E8C547] to-[#C20114] flex flex-col items-center justify-between p-6 text-white"
+              animate={{ scale: isHovered ? 1.05 : 1 }}
+              transition={{ duration: 0.3 }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-widest">Wanted</h2>
+              <div className="w-full h-3/5 relative border-4 border-white overflow-hidden">
                 <Image
-                  src={"/luffy.png"}
-                  width={0}
-                  height={0}
-                  className="w-full h-full object-cover"
+                  src="/luffy.png"
+                  layout="fill"
+                  objectFit="cover"
                   alt="Ken Lu"
-                  sizes="100vw"
                 />
               </div>
-              <div className="md:tracking-wide text-sm min-[400px]:text-xl md:text-3xl uppercase">
-                React and Ruby on Rails
+              <div className="text-center">
+                <p className="text-xl md:text-2xl uppercase mb-2">React and Ruby on Rails</p>
+                <h3 className="text-3xl md:text-4xl font-bold uppercase mb-2">Ken H. Lu</h3>
+                <p className="text-2xl md:text-3xl font-semibold mb-1">$3,000,000,000</p>
+                <p className="text-xl md:text-2xl">FullStackDev</p>
               </div>
-              <div className="md:tracking-widest text-2xl md:text-5xl uppercase">
-                Ken H. Lu
-              </div>
-              <div className="md:tracking-widest text-2xl md:text-4xl">
-                $3,000,000,000
-              </div>
-              <div className="text-2xl md:text-4xl">FullStackDev</div>
-            </div>
+            </motion.div>
           </div>
-        </div>
-      </section>
+        </motion.div>
+      </div>
+    </section>
   )
 }

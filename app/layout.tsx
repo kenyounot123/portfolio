@@ -44,7 +44,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={inter.className}>
-        <ThemeProvider defaultTheme="light" enableSystem={false} >{children}</ThemeProvider>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} >{children}</ThemeProvider>
       </body>
     </html>
   );
