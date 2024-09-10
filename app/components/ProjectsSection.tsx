@@ -25,7 +25,7 @@ const Project = ({ projLink, appName, appRole, appDescription, techStack, appImg
         <Image
           className="object-cover w-full h-full transition-transform duration-300 ease-in-out group-hover:scale-110"
           src={appImg}
-          width={600}
+          width={700}
           height={400}
           alt={appName}
         />
@@ -65,11 +65,11 @@ export default function ProjectSection() {
     },
     {
       projLink: "https://github.com/kenyounot123/messenger-app",
-      appName: "Messenger App",
-      appRole: "Full Stack Software Developer",
-      appDescription: "A web-based messaging app that allows users to send messages to each other. Users can create and customize their profiles, authorize their accounts, and engage in one-on-one conversations with real time updates.",
-      techStack: ["Ruby on Rails", "React", "Postgresql", "Render"],
-      appImg: "/messenger-app.png",
+      appName: "ChatPDF",
+      appRole: "Software Engineer, Full-Stack",
+      appDescription: "A platform that lets users upload any PDF and chat with it to quickly extract information and get instant answers.",
+      techStack: ["Nextjs", "React", "Pinecone", "LangChain", "shadcn", "OpenAI"],
+      appImg: "/pdf-chat-app.png",
     },
     {
       projLink: "https://github.com/kenyounot123/wheres-waldo",

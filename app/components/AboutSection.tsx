@@ -65,7 +65,7 @@ export default function AboutSection() {
               i also love one piece
             </p>
             <p>
-              long term, i hope to 😬 change the world 😬, or something like that 
+             long term, i plan to, you know, casually change the world or something... no big deal. 😬
             </p>
           </div>
 
