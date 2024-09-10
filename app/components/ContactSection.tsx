@@ -21,7 +21,7 @@ export default function ContactSection() {
   ]
 
   return (
-    <section className="py-52 px-4">
+    <section id="contact" className="py-52 px-4">
       <div className="max-w-3xl mx-auto text-center">
         <motion.h2 
           className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-[#E8C547] to-[#C20114] bg-clip-text text-transparent"

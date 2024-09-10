@@ -26,8 +26,8 @@ export default function Home() {
   }
   return (
     <>
-      <LeftAsideNav/>
-      <RightAsideNav/>
+      {/* <LeftAsideNav/>
+      <RightAsideNav/> */}
       {/* ----------------------------------- content starts here ------------------------------------------ */}
       <nav
         className={`py-2 px-4 flex ${
@@ -46,6 +46,7 @@ export default function Home() {
           <Link href="#projects" className="hover:text-gray-600">Projects</Link>
           <Link href="#experience" className="hover:text-gray-600">Experience</Link>
           <Link href="#about" className="hover:text-gray-600">About</Link>
+          <Link href="#contact" className="hover:text-gray-600">Contact</Link>
           <div className="flex items-center min-w-[30px]">
             <ThemeSwitcher width={30} height={30} />
           </div>
