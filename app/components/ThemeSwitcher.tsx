@@ -22,7 +22,7 @@ export function ThemeSwitcher({ width, height }: ThemeSwitcherProps) {
   return (
     <>
       {theme === "light" ? (
-        <button onClick={() => setTheme("dark")}>
+        <button className={`w-${width}`} onClick={() => setTheme("dark")}>
           <Image
             className="transition ease-in-out hover:rotate-45 duration-300"
             src="moon.svg"
@@ -32,7 +32,7 @@ export function ThemeSwitcher({ width, height }: ThemeSwitcherProps) {
           />
         </button>
       ) : (
-        <button onClick={() => setTheme("light")}>
+        <button className={`w-${width}`} onClick={() => setTheme("light")}>
           {" "}
           <Image
             className="transition ease-in-out hover:-rotate-45 duration-300"

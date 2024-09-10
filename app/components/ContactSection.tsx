@@ -40,26 +40,29 @@ export default function ContactSection() {
           <p className="mb-6">
             reach out or say hello!
           </p>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Link
-              href="mailto:kenlu519@gmail.com"
-              className="inline-flex items-center px-6 py-3 font-semibold uppercase text-primary-foreground bg-neutral-800 rounded-full hover:bg-neutral-800/90 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
+          <div className='w-full'>
+            <motion.div
+              className='w-min mx-auto'
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              Contact me
-              <motion.span
-                className="ml-2"
-                animate={{ x: isHovered ? 5 : 0 }}
-                transition={{ duration: 0.2 }}
+              <Link
+                href="mailto:kenlu519@gmail.com"
+                className="inline-flex items-center px-6 py-3 font-semibold uppercase text-primary-foreground bg-neutral-800 rounded-full hover:bg-neutral-800/90 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 text-nowrap"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
               >
-                {isHovered ? <ArrowRight className="h-5 w-5" /> : <Mail className="h-5 w-5" />}
-              </motion.span>
-            </Link>
-          </motion.div>
+                Contact me
+                <motion.span
+                  className="ml-2"
+                  animate={{ x: isHovered ? 5 : 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {isHovered ? <ArrowRight className="h-5 w-5" /> : <Mail className="h-5 w-5" />}
+                </motion.span>
+              </Link>
+            </motion.div>
+          </div>
           
           <motion.div 
             className="mt-8 flex justify-center space-x-6"

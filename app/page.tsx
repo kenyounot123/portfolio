@@ -32,20 +32,23 @@ export default function Home() {
       <nav
         className={`py-2 px-4 flex ${
           theme === "dark" ? "bg-black/80" : "bg-white/80"
-        } backdrop-blur-sm z-20 fixed top-4 left-1/2 -translate-x-1/2 justify-between items-center rounded-full shadow-lg`}
+        } backdrop-blur-sm z-20 fixed top-4 left-1/2 -translate-x-1/2 justify-between items-center rounded-full shadow-lg min-w-[320px]`}
       >
-        <div className="flex items-center space-x-4">
-          <Image
-            alt="Ken Lu"
-            src={theme === "dark" ? "/hero-img-white.png" : "/hero-img.png"}
-            width={30}
-            height={30}
-          />
-          <Link href="#home" className="hover:text-gray-600">Home</Link>
+        <div className="flex items-center gap-5">
+          <Link href="#home" className="w-[50px]">
+            <Image
+              alt="Ken Lu"
+              src={theme === "dark" ? "/hero-img-white.png" : "/hero-img.png"}
+              width={30}
+              height={30}
+            />
+          </Link>
           <Link href="#projects" className="hover:text-gray-600">Projects</Link>
           <Link href="#experience" className="hover:text-gray-600">Experience</Link>
           <Link href="#about" className="hover:text-gray-600">About</Link>
-          <ThemeSwitcher width={30} height={30} />
+          <div className="flex items-center min-w-[30px]">
+            <ThemeSwitcher width={30} height={30} />
+          </div>
         </div>
       </nav>
       <main className="container mx-auto pt-32 pb-48">
