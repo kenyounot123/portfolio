@@ -4,11 +4,16 @@ import { useTheme } from "next-themes"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarImage } from "@/components/ui/avatar"
+import { Github, Linkedin } from "lucide-react"
 
 export default function HomeContent() {
   const { theme } = useTheme()
   return (
-    <Card className="w-[90%] max-w-4xl mx-auto mt-8 shadow-lg">
+    <Card className="w-[90%] max-w-4xl mx-auto mt-8 shadow-lg relative">
+      <div className="absolute top-0 right-0 mr-5 mt-5 flex gap-5">
+        <Link href={"https://github.com/kenyounot123"}><Github/></Link>
+        <Link href={"https://www.linkedin.com/in/ken-h-lu/"}><Linkedin/></Link>
+      </div>
       <CardHeader className="text-center">
         <CardTitle className="text-6xl font-bold bg-gradient-to-r from-[#E8C547] to-[#C20114] bg-clip-text text-transparent">
           Ken Lu
@@ -21,7 +26,7 @@ export default function HomeContent() {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="flex-1 space-y-6">
             <p className="text-lg leading-relaxed">
-              hi, I am an advid <span className="font-semibold bg-gradient-to-r from-[#E8C547] to-[#C20114] bg-clip-text text-transparent">software engineer</span> specializing in <span className="italic">ruby on rails</span> and <span className="italic">react</span>, with a strong background in html, css, and js.
+              hi, I am an avid <span className="font-semibold bg-gradient-to-r from-[#E8C547] to-[#C20114] bg-clip-text text-transparent">software engineer</span> specializing in <span className="italic">ruby on rails</span> and <span className="italic">react</span>, with a strong background in html, css, and js.
             </p>
             <div className="flex flex-wrap justify-center gap-6 my-8 rounded dark:bg-neutral-800">
               {[
