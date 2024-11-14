@@ -60,15 +60,15 @@ export default function ProjectSection() {
       appName: "Flash Prep AI",
       appRole: "Co-Founder and Software Engineer",
       appDescription: "This app leverages AI to generate personalized flashcards that adapt to your learning style, helping you retain information more effectively and enhance your study sessions.",
-      techStack: ["Nextjs", "React", "Firebase", "Vercel", "Stripe API"],
+      techStack: ["Nextjs", "React", "Firebase", "Vercel", "Stripe API", "OpenAI"],
       appImg: "/flashprepai.png",
     },
     {
-      projLink: "https://github.com/kenyounot123/messenger-app",
+      projLink: "https://github.com/kenyounot123/chatpdf",
       appName: "ChatPDF",
       appRole: "Software Engineer, Full-Stack",
       appDescription: "A platform that lets users upload any PDF and chat with it to quickly extract information and get instant answers.",
-      techStack: ["Nextjs", "React", "Pinecone", "LangChain", "shadcn", "OpenAI"],
+      techStack: ["Nextjs", "React", "Convex", "shadcn", "OpenAI"],
       appImg: "/pdf-chat-app.png",
     },
     {

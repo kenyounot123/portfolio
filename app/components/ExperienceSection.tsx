@@ -58,12 +58,12 @@ const ExperienceItem = ({ date, title, description, link }: ExperienceItemProps)
 export default function ExperienceSection() {
   const experiences = [
     {
-      date: "October 2024",
+      date: "October 2024 - Present",
       title: "Full Stack Ruby On Rails Developer",
       description: "Maintained a large traditional Ruby on Rails codebase, resulting in increased code reliability and scalability",
     },
     {
-      date: "August 2024",
+      date: "August 2024 - September 2024",
       title: "Software Engineer & Co-Founder",
       description: "Created and launched an AI-powered flashcard application using Next.js, React, and TypeScript, integrating OpenAI for content generation and Clerk for user authentication, serving over 200 active users.",
       link: {
@@ -72,7 +72,7 @@ export default function ExperienceSection() {
       }
     },
     {
-      date: "August 2024",
+      date: "August 2024 - September 2024",
       title: "Software Engineering Fellow",
       description: "Developed 5 AI-Based projects in 5 weeks and scaled a tech solution to 1000 users as the final project.",
       link: {
@@ -81,7 +81,7 @@ export default function ExperienceSection() {
       }
     },
     {
-      date: "July 2024",
+      date: "July 2024 - August 2024",
       title: "Freelance Full Stack Developer",
       description: "Developed a full-stack eCommerce web app for a client's business using Ruby on Rails, leading to a 30% increase in online sales"
     }
