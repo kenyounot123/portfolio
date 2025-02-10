@@ -56,6 +56,14 @@ export default function ProjectSection() {
 
   const projects = [
     {
+      projLink: "https://track-exp.com",
+      appName: "TrackExp",
+      appRole: "Full Stack Rails Developer",
+      appDescription: "TrackExp is a user-friendly expense tracking application designed to eliminate unnecessary complexity while providing essential features for managing personal finances",
+      techStack: ["Ruby on Rails", "Hotwire", "Stimulus", "Docker", "Kamal", "Chartkick"],
+      appImg: "/trackexp.png",
+    },
+    {
       projLink: "https://flashprepai.com",
       appName: "Flash Prep AI",
       appRole: "Co-Founder and Software Engineer",
