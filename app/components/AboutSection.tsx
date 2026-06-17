@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 import { Mail, ExternalLink } from 'lucide-react'
 
 const SectionTitle = ({ title }: { title: string }) => (
-  <motion.div 
+  <motion.div
     className="flex items-center mb-8"
     initial={{ opacity: 0, x: -50 }}
     animate={{ opacity: 1, x: 0 }}
@@ -36,7 +36,7 @@ export default function AboutSection() {
   return (
     <section id="about" className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
       <div className="lg:flex lg:gap-12 lg:items-start">
-        <motion.div 
+        <motion.div
           className="lg:w-3/5 mb-12 lg:mb-0"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -59,7 +59,7 @@ export default function AboutSection() {
               </Link>.
             </p>
             <p>
-              i love playing pickleball, reading manga, and exercising
+              i love playing pickleball, running, climbing, and exercising
             </p>
             <p>
               i also love one piece
