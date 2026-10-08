@@ -3,15 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --page: 255 255 255;
+  --ink: 17 17 17;
+  --body: 63 63 70;
+  --subtle: 82 82 91;
+  --muted: 113 113 122;
+  --link: 26 79 214;
+  --rule: 228 228 231;
 }
 
-[data-theme="dark"] {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 24, 24, 24;
-  --background-end-rgb: 24, 24, 24;
+.dark {
+  --page: 11 11 12;
+  --ink: 244 244 245;
+  --body: 196 196 204;
+  --subtle: 161 161 170;
+  --muted: 142 142 152;
+  --link: 122 162 255;
+  --rule: 39 39 42;
 }
 
 body {
