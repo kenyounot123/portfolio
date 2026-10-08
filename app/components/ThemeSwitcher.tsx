@@ -1,48 +1,29 @@
-// app/components/ThemeSwitcher.tsx
 "use client";
-import Image from "next/image";
+import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 
-interface ThemeSwitcherProps {
-  width: number;
-  height: number;
-}
+const subscribe = () => () => {};
 
-export function ThemeSwitcher({ width, height }: ThemeSwitcherProps) {
-  const [mounted, setMounted] = useState<boolean>(false);
-  const { theme, setTheme } = useTheme();
+const BUTTON_SIZE = "size-10 shrink-0 rounded-full";
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+export function ThemeSwitcher() {
+  const mounted = useSyncExternalStore(subscribe, () => true, () => false);
+  const { resolvedTheme, setTheme } = useTheme();
 
-  if (!mounted) return null;
+  if (!mounted) return <div className={BUTTON_SIZE} aria-hidden />;
+
+  const isDark = resolvedTheme === "dark";
+  const Icon = isDark ? Sun : Moon;
 
   return (
-    <>
-      {theme === "light" ? (
-        <button className={`w-${width}`} onClick={() => setTheme("dark")}>
-          <Image
-            className="transition ease-in-out hover:rotate-45 duration-300"
-            src="moon.svg"
-            width={width}
-            height={height}
-            alt="moon"
-          />
-        </button>
-      ) : (
-        <button className={`w-${width}`} onClick={() => setTheme("light")}>
-          {" "}
-          <Image
-            className="transition ease-in-out hover:-rotate-45 duration-300"
-            src="sun.svg"
-            width={width}
-            height={height}
-            alt="sun"
-          />
-        </button>
-      )}
-    </>
+    <button
+      type="button"
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
+      className={`${BUTTON_SIZE} flex items-center justify-center border border-rule text-body dark:text-ink`}
+    >
+      <Icon size={18} strokeWidth={2} />
+    </button>
   );
 }

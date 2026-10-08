@@ -19,7 +19,15 @@ const config: Config = {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
-  		colors: {}
+  		colors: {
+  			page: 'rgb(var(--page) / <alpha-value>)',
+  			ink: 'rgb(var(--ink) / <alpha-value>)',
+  			body: 'rgb(var(--body) / <alpha-value>)',
+  			subtle: 'rgb(var(--subtle) / <alpha-value>)',
+  			muted: 'rgb(var(--muted) / <alpha-value>)',
+  			link: 'rgb(var(--link) / <alpha-value>)',
+  			rule: 'rgb(var(--rule) / <alpha-value>)'
+  		}
   	}
   },
   darkMode: ["class"],

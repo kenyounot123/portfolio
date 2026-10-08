@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Script from "next/script"
-import { Montserrat } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 
-const inter = Montserrat({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ken Lu | Software Engineer, Developer, Designer",
@@ -43,7 +43,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-page antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} >{children}</ThemeProvider>
       </body>
     </html>
