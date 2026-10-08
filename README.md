@@ -11,11 +11,6 @@ Welcome to my portfolio website! This project showcases my work and skills as a 
 - **Tailwind CSS**
 - **Google Analytics**: Integrated for tracking visitor interactions and metrics.
 
-## Screenshots
-
-Here are some screenshots of the portfolio website:
-<img width="1417" alt="image" src="https://github.com/user-attachments/assets/cc90383c-2ac5-41c3-a815-c92ab7e588ff">
-
 ## Getting Started
 
 First, run the development server:
