@@ -14,7 +14,10 @@ Welcome to my portfolio website! This project showcases my work and skills as a 
 ## Screenshots
 
 Here are some screenshots of the portfolio website:
-<img width="1417" alt="image" src="https://github.com/user-attachments/assets/cc90383c-2ac5-41c3-a815-c92ab7e588ff">
+
+| Light | Dark |
+| --- | --- |
+| <img alt="Home page in light mode" src="docs/screenshots/home-light.png"> | <img alt="Home page in dark mode" src="docs/screenshots/home-dark.png"> |
 
 ## Getting Started
 
