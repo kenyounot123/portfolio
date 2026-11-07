@@ -12,12 +12,12 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: "TrackExp",
-    aside: { kind: "link", label: "track-exp.com", href: "https://track-exp.com" },
-    result: "Found $300+ in subscriptions I'd forgotten about.",
+    name: "MoneyPouch",
+    aside: { kind: "link", label: "demo.moneypouch.app", href: "https://demo.moneypouch.app" },
+    result: "Tracking spending in Excel was a chore — so I built a tracker that takes 3 seconds.",
     description:
-      "A personal expense tracker with spending by category and automatic tracking of recurring bills. Deployed to a DigitalOcean server.",
-    stack: ["Ruby on Rails", "Hotwire", "Docker", "Kamal"],
+      "A free, open-source, self-hosted expense tracker. Press ⌘K, type “Chipotle 11.25 yesterday,” hit Enter — it parses the merchant, amount, and date. Imports old Excel expenses with dedupe, syncs bank transactions optionally via SimpleFIN, and shows where your money goes at a glance. No budgets, no net worth, your data on your own server.",
+    stack: ["Ruby on Rails", "Hotwire", "Tailwind", "SQLite", "Docker"],
   },
   {
     name: "ChatPDF",
